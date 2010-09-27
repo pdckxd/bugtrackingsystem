@@ -81,6 +81,9 @@
     <Content Include="Styles\Site.css" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Database\Bts_CreateDB.sql" />
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
