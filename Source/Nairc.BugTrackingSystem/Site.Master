@@ -29,12 +29,23 @@
                 </asp:LoginView>
             </div>
             <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="#" Text="About"/>
-                    </Items>
-                </asp:Menu>
+                <a href="#NavigationMenu_SkipLink">
+                    <img style="border-width: 0px;" alt="Skip Navigation Links" src="/WebResource.axd?d=Po6DFaXaRtr1OjuMrSyc2kSI2I5DUYgmLcbtHnxZQCB6gfKuBUXE2xHV_kxNEOjBJIT7qbs1fvQUF31MTdeS0hD8v7DydVJt0X1kxI9BerE1&amp;t=634213832687460937"
+                        width="0" height="0"/>
+                </a>
+                <div style="float: left;" id="NavigationMenu" class="menu">
+                            <ul style="width: auto; float: left; position: relative;" class="level1 static" role="menubar" tabindex="0">
+                                <li style="float: left; position: relative;" class="static" role="menuitem">
+                                   <a class="level1 static" tabindex="-1" href="Default.aspx">Home</a>
+                                </li>
+                               <%-- <li style="float: left; position: relative;" class="static" role="menuitem">
+                                   <a class="level1 static" tabindex="-1" href="About.aspx">About</a>
+                                </li>--%>
+                            </ul>
+                </div>
+                <div style="clear: left;">
+                </div>
+                <a id="NavigationMenu_SkipLink"></a>            
             </div>
         </div>
         <div class="main">
