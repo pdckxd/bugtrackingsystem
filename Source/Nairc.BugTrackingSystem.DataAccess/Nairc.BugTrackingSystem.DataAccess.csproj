@@ -36,6 +36,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -49,6 +50,7 @@
     <Compile Include="Database\NaircConnectionString.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Database\DatabaseFactory.cs" />
+    <Compile Include="Database\OracleDatabase.cs" />
     <Compile Include="Database\SqlDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
