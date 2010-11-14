@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nairc.KpwControlSystem.Desktop", "Nairc.KpwControlSystem.Desktop\Nairc.KpwControlSystem.Desktop.csproj", "{A7A9375E-9867-4D53-B725-B083C95963FA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{3168E1BE-341B-46D1-9C9C-287A89DFE3DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nairc.KpwControlSystem.Modules.Operation", "Nairc.KpwControlSystem.Modules.Operation\Nairc.KpwControlSystem.Modules.Operation.csproj", "{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,8 +17,15 @@ Global
 		{A7A9375E-9867-4D53-B725-B083C95963FA}.Debug|x86.Build.0 = Debug|x86
 		{A7A9375E-9867-4D53-B725-B083C95963FA}.Release|x86.ActiveCfg = Release|x86
 		{A7A9375E-9867-4D53-B725-B083C95963FA}.Release|x86.Build.0 = Release|x86
+		{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20}.Debug|x86.ActiveCfg = Debug|x86
+		{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20}.Debug|x86.Build.0 = Debug|x86
+		{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20}.Release|x86.ActiveCfg = Release|x86
+		{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2DCF12A7-F79D-4F82-A138-4FE05CB5BE20} = {3168E1BE-341B-46D1-9C9C-287A89DFE3DF}
 	EndGlobalSection
 EndGlobal

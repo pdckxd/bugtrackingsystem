@@ -8,8 +8,24 @@
         <ImageBrush ImageSource="Resources/background.png"></ImageBrush>
     </Window.Background>
     <Window.Resources>
-        <ResourceDictionary Source="Resources/styles.xaml"></ResourceDictionary>
+        <Storyboard x:Key="InTransition">
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ContentGrid" Storyboard.TargetProperty="(UIElement.Opacity)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="0"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01.5000000" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="ContentGrid" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                <SplineDoubleKeyFrame KeyTime="00:00:00" Value="-72"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:01" Value="-157"/>
+                <SplineDoubleKeyFrame KeySpline="0.5,0,0.5,1" KeyTime="00:00:01.5000000" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource InTransition}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -32,7 +48,7 @@
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="120"></RowDefinition>
-                    <RowDefinition Height="70"></RowDefinition>
+                    <!--<RowDefinition Height="70"></RowDefinition>-->
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Canvas x:Name="Logo" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
@@ -44,11 +60,31 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Canvas.RenderTransform>
-                    <TextBlock Text="KPW " TextWrapping="NoWrap" Foreground="#FFC4CFD6" FontSize="72" Opacity="0.85" Canvas.Left="0" Canvas.Top="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="80" Width="200" TextAlignment="Left" FontWeight="Bold" />
-                    <TextBlock Text="控制系统" TextWrapping="NoWrap" Foreground="#FFC4CFD6" FontSize="72" Opacity="0.85" Height="80" TextAlignment="Left" FontWeight="Normal" Width="300" Canvas.Left="200" Canvas.Top="5"/>
+                    <TextBlock Text="KPW " TextWrapping="NoWrap" Foreground="#FFC4CFD6" FontSize="72" Opacity="0.85" Canvas.Left="0" Canvas.Top="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="90" Width="200" TextAlignment="Left" FontWeight="Bold" />
+                    <TextBlock Text="控制系统" TextWrapping="NoWrap" Foreground="#FFC4CFD6" FontSize="72" Opacity="0.85" Height="90" TextAlignment="Left" FontWeight="Normal" Width="300" Canvas.Left="200" Canvas.Top="5"/>
                 </Canvas>
                 <Image Source="Resources/logo.gif" Margin="10" HorizontalAlignment="Right"></Image>
-                <Border Name="Navigator" Grid.Row="1" BorderBrush="White" BorderThickness="1" Background="{StaticResource sideBarHeaderBarBG}" CornerRadius="20" Margin="10"></Border>
+                
+                <!-- Content -->
+                <Grid x:Name="ContentGrid" Grid.Row="1" RenderTransformOrigin="0.5,0.5" Margin="10">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Controls:AnimatedTabControl
+                    x:Name="MainActionTab"
+                    SelectedIndex="0"  
+                    VerticalAlignment="Stretch"
+                    ItemContainerStyle="{StaticResource ShellTabItemStyle}" 
+                    Background="{StaticResource headerBarBG}" 
+                    cal:RegionManager.RegionName="ActionRegion"
+                    AutomationProperties.AutomationId="MainActionTab" />
+                </Grid>
+                <!--<Border Name="Navigator" Grid.Row="1" BorderBrush="White" BorderThickness="1" Background="{StaticResource sideBarHeaderBarBG}" CornerRadius="20" Margin="10"></Border>
                 <ContentControl Grid.Row="2" x:Name="ActionContent" cal:RegionManager.RegionName="ActionRegion" Margin="10">
                     <ContentControl.Template>
                         <ControlTemplate TargetType="ContentControl">
@@ -57,13 +93,13 @@
                                 <ContentPresenter Margin="10,0,10,0" Content="{TemplateBinding Content}" />
                             </Grid>
                             <ControlTemplate.Triggers>
-                                <!--<Trigger Property="HasContent" Value="false">
+                                <Trigger Property="HasContent" Value="false">
                                     <Setter Property="Visibility" Value="Collapsed" />
-                                </Trigger>-->
+                                </Trigger>
                             </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </ContentControl.Template>
-                </ContentControl>
+                </ContentControl>-->
             </Grid>
         </Grid>
         <StatusBar Grid.Row="1" Background="#B0BFC8"></StatusBar>

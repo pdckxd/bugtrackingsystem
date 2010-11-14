@@ -7,6 +7,7 @@ using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Prism.UnityExtensions;
 using System.Windows;
+using Nairc.KpwControlSystem.Modules.Operation;
 
 namespace Nairc.KpwControlSystem.Desktop
 {
@@ -23,6 +24,16 @@ namespace Nairc.KpwControlSystem.Desktop
 
             App.Current.MainWindow = (Window)this.Shell;
             App.Current.MainWindow.Show();
-        } 
+        }
+
+        protected override void ConfigureModuleCatalog()
+        {
+            base.ConfigureModuleCatalog();
+
+            base.ConfigureModuleCatalog();
+
+            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+            moduleCatalog.AddModule(typeof(OperationModule));
+        }
     }
 }
