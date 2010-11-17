@@ -39,6 +39,11 @@ namespace Nairc.KpwControlSystem.Modules.Operation.Views
                 DataContext = value;
             }
         }
+
+        private void btnOK_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello,KPW.");
+        }
     
     
     }

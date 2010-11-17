@@ -6,6 +6,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Button Name="btnOK" Content="OK Test!" Width="100" Height="40"></Button>
+        <Button Name="btnOK" Content="OK Test!" Width="100" Height="40" Click="btnOK_Click"></Button>
     </Grid>
 </UserControl>
