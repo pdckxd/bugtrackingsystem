@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Nairc.KpwControlSystem.Desktop.Views;
 
 namespace Nairc.KpwControlSystem.Desktop
 {
@@ -23,5 +24,16 @@ namespace Nairc.KpwControlSystem.Desktop
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //this.login.ShowDialog();
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            //this.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
     }
 }
