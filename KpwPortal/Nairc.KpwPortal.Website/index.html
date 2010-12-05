@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Site Name</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="BackgroundGradient"> </div>
+    <div class="BodyContent">
+
+    <div class="BorderBorder"><div class="BorderBL"><div></div></div><div class="BorderBR"><div></div></div><div class="BorderTL"></div><div class="BorderTR"><div></div></div><div class="BorderT"></div><div class="BorderR"><div></div></div><div class="BorderB"><div></div></div><div class="BorderL"></div><div class="BorderC"></div><div class="Border">
+
+        <div class="Header">
+          <div class="HeaderTitle">
+            <h1><a href="#">Web Site Name</a></h1>
+            <h2>Subtitle</h2>
+          </div>
+        </div><div class="Menu">
+             <ul><%= RenderMenu() %></ul>
+        </div><div class="Columns"><div class="Column1">
+        <div class="BlockBorder"><div class="BlockBL"><div></div></div><div class="BlockBR"><div></div></div><div class="BlockTL"></div><div class="BlockTR"><div></div></div><div class="BlockT"></div><div class="BlockR"><div></div></div><div class="BlockB"><div></div></div><div class="BlockL"></div><div class="BlockC"></div><div class="Block">
+
+            <span class="BlockHeader"><span>Search This Site</span></span>
+            <div class="BlockContentBorder">
+
+                <input type="text" style="width:120px" />
+                <span class="ButtonInput"><span><input type="button" value="Search" /></span></span>
+
+            </div>
+
+        </div></div>
+
+
+        <div class="BlockBorder"><div class="BlockBL"><div></div></div><div class="BlockBR"><div></div></div><div class="BlockTL"></div><div class="BlockTR"><div></div></div><div class="BlockT"></div><div class="BlockR"><div></div></div><div class="BlockB"><div></div></div><div class="BlockL"></div><div class="BlockC"></div><div class="Block">
+
+            <span class="BlockHeader"><span>Links</span></span>
+            <div class="BlockContentBorder">
+
+                <ul>
+                    <li><a href="#">Test Link 1</a></li>
+                    <li><a href="#">Test Link 2</a></li>
+                    <li><a href="#">Test Link 3</a></li>
+                    <li><a href="#">Test Link 4</a></li>
+                    <li><a href="#">Test Link 5</a></li>
+                </ul>
+
+            </div>
+
+        </div></div>
+
+        </div><div class="MainColumn">
+        <div class="ArticleBorder"><div class="ArticleBL"><div></div></div><div class="ArticleBR"><div></div></div><div class="ArticleTL"></div><div class="ArticleTR"><div></div></div><div class="ArticleT"></div><div class="ArticleR"><div></div></div><div class="ArticleB"><div></div></div><div class="ArticleL"></div><div class="ArticleC"></div><div class="Article">
+
+            <asp:ContentPlaceHolder id="Content" runat="server" />
+
+        </div></div></div></div>
+        <div class="Footer">
+           Footer Text - <a href="#">Contact Us</a>
+        </div>                
+
+    </div></div>
+    </div>
+    <span class="BackLink"><a href="http://cooltemplate.com">Web Template</a> created using Cool Template</span>
+</body>
+</html>

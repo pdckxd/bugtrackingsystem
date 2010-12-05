@@ -1,0 +1,194 @@
+<%@ Master Language="C#" CodeFile="MasterPage.master.cs" Inherits="Nairc.KpwPortal.Website.MasterPage"
+    EnableViewState="false" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Web Site Name</title>
+    <link rel="stylesheet" href="style.css" />
+    <asp:ContentPlaceHolder ID="Head" runat="server" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="BackgroundGradient">
+    </div>
+    <div class="BodyContent">
+        <div class="BorderBorder">
+            <div class="BorderBL">
+                <div>
+                </div>
+            </div>
+            <div class="BorderBR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderTL">
+            </div>
+            <div class="BorderTR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderT">
+            </div>
+            <div class="BorderR">
+                <div>
+                </div>
+            </div>
+            <div class="BorderB">
+                <div>
+                </div>
+            </div>
+            <div class="BorderL">
+            </div>
+            <div class="BorderC">
+            </div>
+            <div class="Border">
+                <div class="Header">
+                    <div class="HeaderTitle">
+                        <h1>
+                            <a href="#">KPW 望远镜控制系统</a></h1>
+                        <h2>
+                            紫金观测站</h2>
+                    </div>
+                </div>
+                <div class="Menu">
+                    <ul>
+                        <%= RenderMenu() %></ul>
+                </div>
+                <div class="Columns">
+                    <div class="Column1">
+                        <div class="BlockBorder">
+                            <div class="BlockBL">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockBR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockTL">
+                            </div>
+                            <div class="BlockTR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockT">
+                            </div>
+                            <div class="BlockR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockB">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockL">
+                            </div>
+                            <div class="BlockC">
+                            </div>
+                            <div class="Block">
+                                <span class="BlockHeader"><span>操作员登陆</span></span>
+                                <div class="BlockContentBorder">
+                                    <asp:Login ID="Login1" runat="server" LoginButtonText="登陆" 
+                                        PasswordLabelText="密码:" UserNameLabelText="用户名:" TextLayout="TextOnTop" TitleText=""
+                                         TextBoxStyle-Width="135px" onauthenticate="Login1_Authenticate" >
+
+<TextBoxStyle Width="135px"></TextBoxStyle>
+
+                                        <LoginButtonStyle Width="70px" />
+                                    </asp:Login>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BlockBorder">
+                            <div class="BlockBL">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockBR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockTL">
+                            </div>
+                            <div class="BlockTR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockT">
+                            </div>
+                            <div class="BlockR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockB">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="BlockL">
+                            </div>
+                            <div class="BlockC">
+                            </div>
+                            <div class="Block">
+                                <span class="BlockHeader"><span>友情链接</span></span>
+                                <div class="BlockContentBorder">
+                                    <ul>
+                                        <li><a href="#">中科院南京天文仪器有限公司</a></li>
+                                        <li><a href="#">国家天文台</a></li>
+                                        <li><a href="#">紫金山天文台</a></li>
+                                        <li><a href="#">牧夫天文论坛</a></li>
+                                        <li><a href="#">NASA</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="MainColumn">
+                        <div class="ArticleBorder">
+                            <div class="ArticleBL">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="ArticleBR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="ArticleTL">
+                            </div>
+                            <div class="ArticleTR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="ArticleT">
+                            </div>
+                            <div class="ArticleR">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="ArticleB">
+                                <div>
+                                </div>
+                            </div>
+                            <div class="ArticleL">
+                            </div>
+                            <div class="ArticleC">
+                            </div>
+                            <div class="Article">
+                                <asp:ContentPlaceHolder ID="Content" runat="server" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Footer">
+                    <asp:ContentPlaceHolder ID="Footer" runat="server" />
+                    <a href="#">联系我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="BackLink">Web design by <a href="http://www.cosmoser.com">Cosmoser</a>.</span>
+    <asp:ContentPlaceHolder ID="AfterBody" runat="server" />
+    </form>
+</body>
+</html>
