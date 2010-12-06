@@ -20,13 +20,14 @@ namespace Nairc.KpwPortal.Website
             var result = new StringBuilder();
             RenderMenuItem("主页", "Default.aspx", result);
             RenderMenuItem("望远镜控制台", "KpwControlPage.aspx", result);
+            RenderMenuItem("用户设置", "Accounts/Users.aspx", result);
             RenderMenuItem("关于", "About.aspx", result);
             return result.ToString();
         }
 
         void RenderMenuItem(string title, string address, StringBuilder output)
         {
-            output.AppendFormat("<li><a href=\"{0}\" ", address);
+            output.AppendFormat("<li><a href=\"{0}\" ", Request.Url.ToString().Replace(Request.RawUrl,"/") + address);
 
             var requestUrl = HttpContext.Current.Request.Url;
             if (requestUrl.Segments[requestUrl.Segments.Length - 1].Equals(address, StringComparison.OrdinalIgnoreCase)) // If the requested address is this menu item.
