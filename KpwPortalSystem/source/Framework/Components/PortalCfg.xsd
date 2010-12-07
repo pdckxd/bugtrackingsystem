@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xs:schema id="SiteConfiguration" targetNamespace="http://tempuri.org/PortalCfg.xsd" xmlns:mstns="http://tempuri.org/PortalCfg.xsd" xmlns="http://tempuri.org/PortalCfg.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="SiteConfiguration" msdata:IsDataSet="true" msdata:EnforceConstraints="False">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element name="Global">
+                    <xs:complexType>
+                        <xs:attribute name="PortalId" form="unqualified" type="xs:int" />
+                        <xs:attribute name="PortalName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="AlwaysShowEditButton" form="unqualified" type="xs:boolean" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Tab">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Module" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Settings" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Setting" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent msdata:ColumnName="Setting_Text" msdata:Ordinal="1">
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute name="Name" form="unqualified" type="xs:string" />
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ModuleId" form="unqualified" type="xs:int" />
+                                    <xs:attribute name="ModuleTitle" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="EditRoles" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="ModuleDefId" form="unqualified" type="xs:int" />
+                                    <xs:attribute name="PaneName" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="CacheTimeout" form="unqualified" type="xs:int" />
+                                    <xs:attribute name="ModuleOrder" form="unqualified" type="xs:int" />
+                                    <xs:attribute name="ShowMobile" form="unqualified" type="xs:boolean" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="TabId" form="unqualified" type="xs:int" />
+                        <xs:attribute name="TabName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="AccessRoles" form="unqualified" type="xs:string" />
+                        <xs:attribute name="TabOrder" form="unqualified" type="xs:int" />
+                        <xs:attribute name="ShowMobile" form="unqualified" type="xs:boolean" />
+                        <xs:attribute name="MobileTabName" form="unqualified" type="xs:string" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ModuleDefinition">
+                    <xs:complexType>
+                        <xs:attribute name="FriendlyName" form="unqualified" type="xs:string" />
+                        <xs:attribute name="MobileSourceFile" form="unqualified" type="xs:string" />
+                        <xs:attribute name="DesktopSourceFile" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ModuleDefId" form="unqualified" type="xs:int" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:choice>
+        </xs:complexType>
+        <xs:key name="GlobalKey" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:Global" />
+            <xs:field xpath="@PortalID" />
+        </xs:key>
+        <xs:key name="TabKey" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:Tab" />
+            <xs:field xpath="@TabId" />
+        </xs:key>
+        <xs:key name="ModuleKey" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:Module" />
+            <xs:field xpath="@ModuleID" />
+        </xs:key>
+        <xs:key name="ModDefKey" msdata:PrimaryKey="true">
+            <xs:selector xpath=".//mstns:ModuleDefinition" />
+            <xs:field xpath="@ModuleDefId" />
+        </xs:key>
+    </xs:element>
+</xs:schema>

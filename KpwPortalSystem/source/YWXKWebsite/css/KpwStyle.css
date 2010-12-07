@@ -1,0 +1,54 @@
+﻿     
+/* Vertical Tabs----------------------------------*/ 
+       .ui-tabs-vertical
+        {
+            width: 100%;
+        }
+        .ui-tabs-vertical .ui-tabs-nav
+        {
+            padding: .2em .1em .2em .2em;
+            float: left;
+            width: 130px;
+            height: 720px;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li
+        {
+            clear: left;
+            width: 100%;
+            border-bottom-width: 3px !important;
+            border-right-width: 0 !important;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li a
+        {
+            display: block;
+        }
+        .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-selected
+        {
+            padding-bottom: 0;
+            padding-right: 0;
+            border-right-width: 1px;
+            border-right-width: 1px;
+        }
+        .ui-tabs-vertical .ui-tabs-panel
+        {
+        	padding:0;
+            float: right;
+            width: 82%;
+        }
+        
+    
+ /* End of Vertical Tabs----------------------------------*/ 
+ 
+ .ContentBox
+    {
+    	font: 11px "Helvetica Neue";
+    	padding-top:3px;
+        height:23px;
+    }
+    
+    .ContentInformation
+    {
+        float:right;
+    	border-style:solid; border-width:1px; border-color:Gray;
+    	width:120px;
+    }

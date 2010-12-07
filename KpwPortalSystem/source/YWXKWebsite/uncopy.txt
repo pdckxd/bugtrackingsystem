@@ -1,0 +1,6 @@
+.svn
+obj
+.cs
+Properties
+.pdb
+uncopy.txt

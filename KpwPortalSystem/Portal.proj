@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	  
+  <Import Project="MSBuild.Community.Tasks.Targets"/>
+
+  
+  <PropertyGroup>
+    <Major>3</Major>
+    <Minor>5</Minor>
+    <Build>0</Build>
+    <Revision>0</Revision>
+  </PropertyGroup>
+  
+	
+  <ItemGroup>
+    <DefaultExclude Include="**\.svn\**" />
+	<DefaultExclude Include="**\_ReSharper*\**" />	
+    <DefaultExclude Include="**\bin\**" />
+    <DefaultExclude Include="**\obj\**" />
+    <DefaultExclude Include="**\Release\**" />
+    <DefaultExclude Include="**\Debug\**" />
+    <DefaultExclude Include="**\Test\**" />
+    <DefaultExclude Include="**\TestResults\**" />
+    <DefaultExclude Include="**\doc\**" />
+    <DefaultExclude Include="**\www\**" />
+    <DefaultExclude Include="**\*.user" />
+    <DefaultExclude Include="**\*.suo" />
+    <DefaultExclude Include="**\*.zip" />
+    <DefaultExclude Include="**\*.txt" />
+	<DefaultExclude Include="**\*.cache" />
+  </ItemGroup>
+     
+  <ItemGroup>
+    <ZipSourceFiles Include="**\*.*" Exclude="@(DefaultExclude)" />	
+  </ItemGroup>
+    
+  <Target Name="Version">
+    
+    <Message Text="Version: $(Major).$(Minor).$(Build).$(Revision)"/>
+	
+  </Target>
+
+  <Target Name="Compile" DependsOnTargets="Version">
+    <MSBuild Projects="source\Portal.sln" 
+             Properties="Configuration=Release" />
+  </Target>
+  
+  <Target Name="Documentation" DependsOnTargets="Compile">
+   
+  </Target>
+   
+  <Target Name="ZipSources" DependsOnTargets="Documentation">  
+    <Zip Files="@(ZipSourceFiles)" 
+         ZipFileName="..\Portal-Sources.v$(Major).$(Minor).$(Build).$(Revision).zip" />
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="ZipSources">
+    <Message Text="Build Complete"/>
+  </Target>
+
+</Project>

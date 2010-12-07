@@ -1,0 +1,392 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4BBF36E-8481-4244-A768-21CCB12DB294}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesktopModules.Web</RootNamespace>
+    <AssemblyName>DesktopModules.Web</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Announcements.ascx.cs">
+      <DependentUpon>Announcements.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Announcements.ascx.designer.cs">
+      <DependentUpon>Announcements.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.ascx.cs">
+      <DependentUpon>Contacts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacts.ascx.designer.cs">
+      <DependentUpon>Contacts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DiscussDetails.aspx.cs">
+      <DependentUpon>DiscussDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DiscussDetails.aspx.designer.cs">
+      <DependentUpon>DiscussDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Discussion.ascx.cs">
+      <DependentUpon>Discussion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Discussion.ascx.designer.cs">
+      <DependentUpon>Discussion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Document.ascx.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Document.ascx.designer.cs">
+      <DependentUpon>Document.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditAnnouncements.aspx.cs">
+      <DependentUpon>EditAnnouncements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditAnnouncements.aspx.designer.cs">
+      <DependentUpon>EditAnnouncements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditContacts.aspx.cs">
+      <DependentUpon>EditContacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditContacts.aspx.designer.cs">
+      <DependentUpon>EditContacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDocs.aspx.cs">
+      <DependentUpon>EditDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDocs.aspx.designer.cs">
+      <DependentUpon>EditDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditEvents.aspx.cs">
+      <DependentUpon>EditEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditEvents.aspx.designer.cs">
+      <DependentUpon>EditEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditHtml.aspx.cs">
+      <DependentUpon>EditHtml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditHtml.aspx.designer.cs">
+      <DependentUpon>EditHtml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditImage.aspx.cs">
+      <DependentUpon>EditImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditImage.aspx.designer.cs">
+      <DependentUpon>EditImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditLinks.aspx.cs">
+      <DependentUpon>EditLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditLinks.aspx.designer.cs">
+      <DependentUpon>EditLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditXml.aspx.cs">
+      <DependentUpon>EditXml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditXml.aspx.designer.cs">
+      <DependentUpon>EditXml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events.ascx.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events.ascx.designer.cs">
+      <DependentUpon>Events.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlModule.ascx.cs">
+      <DependentUpon>HtmlModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HtmlModule.ascx.designer.cs">
+      <DependentUpon>HtmlModule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageModule.ascx.cs">
+      <DependentUpon>ImageModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImageModule.ascx.designer.cs">
+      <DependentUpon>ImageModule.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\ImageGalleryEx.aspx.cs">
+      <DependentUpon>ImageGalleryEx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\ImageGalleryEx.aspx.designer.cs">
+      <DependentUpon>ImageGalleryEx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\ImagesGallery.aspx.cs">
+      <DependentUpon>ImagesGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\ImagesGallery.aspx.designer.cs">
+      <DependentUpon>ImagesGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Camera.ascx.cs">
+      <DependentUpon>Kpw60Camera.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Camera.ascx.designer.cs">
+      <DependentUpon>Kpw60Camera.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Console.ascx.cs">
+      <DependentUpon>Kpw60Console.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Console.ascx.designer.cs">
+      <DependentUpon>Kpw60Console.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60ConsolePage.aspx.cs">
+      <DependentUpon>Kpw60ConsolePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60ConsolePage.aspx.designer.cs">
+      <DependentUpon>Kpw60ConsolePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Pictures.ascx.cs">
+      <DependentUpon>Kpw60Pictures.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Pictures.ascx.designer.cs">
+      <DependentUpon>Kpw60Pictures.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Telescope.ascx.cs">
+      <DependentUpon>Kpw60Telescope.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\Kpw60Telescope.ascx.designer.cs">
+      <DependentUpon>Kpw60Telescope.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\KpwRadioTelescope.ascx.cs">
+      <DependentUpon>KpwRadioTelescope.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\KpwRadioTelescope.ascx.designer.cs">
+      <DependentUpon>KpwRadioTelescope.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\KPWSample.ascx.cs">
+      <DependentUpon>KPWSample.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\KPWSample.ascx.designer.cs">
+      <DependentUpon>KPWSample.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\KpwSolarTelescope.ascx.cs">
+      <DependentUpon>KpwSolarTelescope.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\KpwSolarTelescope.ascx.designer.cs">
+      <DependentUpon>KpwSolarTelescope.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\VideoPlayer.ascx.cs">
+      <DependentUpon>VideoPlayer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\VideoPlayer.ascx.designer.cs">
+      <DependentUpon>VideoPlayer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Links.ascx.cs">
+      <DependentUpon>Links.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Links.ascx.designer.cs">
+      <DependentUpon>Links.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickLinks.ascx.cs">
+      <DependentUpon>QuickLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuickLinks.ascx.designer.cs">
+      <DependentUpon>QuickLinks.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Signin.ascx.cs">
+      <DependentUpon>Signin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Signin.ascx.designer.cs">
+      <DependentUpon>Signin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDocument.aspx.cs">
+      <DependentUpon>ViewDocument.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDocument.aspx.designer.cs">
+      <DependentUpon>ViewDocument.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="XmlModule.ascx.cs">
+      <DependentUpon>XmlModule.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="XmlModule.ascx.designer.cs">
+      <DependentUpon>XmlModule.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Announcements.ascx" />
+    <Content Include="codebase\NetVideoActiveX23.cab" />
+    <Content Include="Contacts.ascx" />
+    <Content Include="DiscussDetails.aspx" />
+    <Content Include="Discussion.ascx" />
+    <Content Include="Document.ascx" />
+    <Content Include="EditAnnouncements.aspx" />
+    <Content Include="EditContacts.aspx" />
+    <Content Include="EditDocs.aspx" />
+    <Content Include="EditEvents.aspx" />
+    <Content Include="EditHtml.aspx" />
+    <Content Include="EditImage.aspx" />
+    <Content Include="EditLinks.aspx" />
+    <Content Include="EditXml.aspx" />
+    <Content Include="Events.ascx" />
+    <Content Include="HtmlModule.ascx" />
+    <Content Include="ImageModule.ascx" />
+    <Content Include="KPWModules\ImageGalleryEx.aspx" />
+    <Content Include="KPWModules\ImagesGallery.aspx" />
+    <Content Include="KPWModules\Kpw60Camera.ascx" />
+    <Content Include="KPWModules\Kpw60Console.ascx" />
+    <Content Include="KPWModules\Kpw60ConsolePage.aspx" />
+    <Content Include="KPWModules\Kpw60Pictures.ascx" />
+    <Content Include="KPWModules\Kpw60Telescope.ascx" />
+    <Content Include="KPWModules\KpwRadioTelescope.ascx" />
+    <Content Include="KPWModules\KPWSample.ascx" />
+    <Content Include="KPWModules\KpwSolarTelescope.ascx" />
+    <Content Include="KPWModules\VideoPlayer.ascx" />
+    <Content Include="Links.ascx" />
+    <Content Include="QuickLinks.ascx" />
+    <Content Include="Signin.ascx" />
+    <Content Include="ViewDocument.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="XmlModule.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessLayer\BusinessObjects\BusinessObjects.csproj">
+      <Project>{BE2DBC8C-8418-4DEA-AEFF-39AD63177A14}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessLayer\Facade\Facade.csproj">
+      <Project>{733D7632-A04D-41BC-B12A-2AFC36C34CA0}</Project>
+      <Name>Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Components\Components.csproj">
+      <Project>{BF896306-B90F-412A-89C9-C79121F3EE57}</Project>
+      <Name>Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KpwDataAccess\KpwDataAccess.csproj">
+      <Project>{A236F3DB-A6EF-413E-ACCF-7B7AF3E66FEA}</Project>
+      <Name>KpwDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KpwDataModel\KpwDataModel.csproj">
+      <Project>{7F85FA36-0478-4EED-BEC4-2C9F23B674FC}</Project>
+      <Name>KpwDataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TelescopeControler\TelescopeControler.csproj">
+      <Project>{2A464213-D801-4ED7-8AC7-8A61B4D26B25}</Project>
+      <Name>TelescopeControler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>46507</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3801/WebApplication/DesktopModules</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties IsWebProject="true" IsFolderOfRootWebProject="true" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,60 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs"
+    Inherits="DefaultMaster" %>
+<%@ Register TagPrefix="ASPNETPortal" TagName="Banner" Src="DesktopPortalBanner.ascx" %>
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>深圳市天文观测系统</title>
+    
+    <link href="~/css/KpwStyle.css" type="text/css" rel="stylesheet" />
+    <link href="~/ASPNETPortal.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="../CrystalX/css/main.css" />
+    <link rel="stylesheet" media="print" type="text/css" href="../CrystalX/css/print.css" />
+    <link rel="stylesheet" media="aural" type="text/css" href="../CrystalX/css/aural.css" />
+    <link rel="stylesheet" href="../JavaScript/SexyButtons/sexybuttons.css" type="text/css" />
+    <link type="text/css" href="../css/redmond/jquery-ui-1.8.1.custom.css" rel="stylesheet" />
+    
+    <script type="text/javascript" src="../JavaScript/jquery-1.4.1.js"></script>  
+    <script type="text/javascript" src="../JavaScript/jquery-ui-1.8.1.custom.min.js"></script>      
+    <script src="../JavaScript/KPWPortalJScript.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../JavaScript/jquery.timers.js"></script>
+   
+</head>
+<body bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0" marginheight="0" marginwidth="0" >
+    <div id="main" class="box">    
+    <form id="Form1" runat="server" >
+     <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+          <Scripts>
+              <asp:ScriptReference Path="~/JavaScript/KPWPortalJScript.js" />
+          </Scripts>
+          <Services>
+            <asp:ServiceReference Path="~/KPWPortalWebService.asmx" />
+         </Services>
+    </asp:ScriptManager>
+            <!-- Header -->
+    <div style="position:relative; margin:40px 0 0 0;">
+          <ASPNETPortal:Banner id="Banner" runat="server" SelectedTabIndex="0"></ASPNETPortal:Banner>
+    </div> <!-- /header -->
+    
+    <!-- Page (2 columns) -->
+    <div id="page" class="box">   
+      <asp:ContentPlaceHolder ID="maincontent" runat="server" />
+    </div> <!-- /page -->
+
+    <!-- Footer -->
+    <div id="footer">
+     <div class="SiteLink">                        
+        <a class="sitemaplink" href="http://159.226.75.27:8080/Web.sitemap">站点地图</a> 
+        | <a href="http://www.nairc.com"> 
+            &copy;2010 中科院南京天文仪器有限公司
+        </a>|
+        <a href='#' >联系我们</a>|
+        <a href='#' >法律问题</a>|
+        <a href='#' >Powered by TonyWu</a>                            
+     </div>    
+    </div>
+    </form>
+    </div>
+</body>
+</html>

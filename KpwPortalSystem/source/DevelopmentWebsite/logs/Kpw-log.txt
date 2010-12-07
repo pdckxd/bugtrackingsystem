@@ -1,0 +1,2 @@
+2010-06-06 13:12:42,953 [5] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StopFindStar

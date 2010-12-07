@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="yes"?>
+<SiteConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/PortalCfg.xsd">
+  <Global PortalId="0" PortalName="深圳市气象局网上天文共享平台（测试版）" AlwaysShowEditButton="false" />
+  <Tab TabId="1" TabName="主页" AccessRoles="All Users;" TabOrder="1" ShowMobile="true" MobileTabName="Home">
+    <Module ModuleId="1" ModuleTitle="QuickLinks" EditRoles="Admins;" ModuleDefId="8" PaneName="LeftPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="64" ModuleTitle="中科院南京天文仪器有限公司" EditRoles="Admins" ModuleDefId="5" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="83" ModuleTitle="天气" EditRoles="Admins" ModuleDefId="5" PaneName="RightPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="84" ModuleTitle="天文观测预告" EditRoles="Admins" ModuleDefId="5" PaneName="RightPane" CacheTimeout="0" ModuleOrder="3" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="6" TabName="管理" AccessRoles="Admins;" TabOrder="11" ShowMobile="false" MobileTabName="Admin">
+    <Module ModuleId="28" ModuleTitle="模块定义" EditRoles="Admins;" ModuleDefId="11" PaneName="RightPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="29" ModuleTitle="站点设置" EditRoles="Admins;" ModuleDefId="14" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="30" ModuleTitle="Tabs" EditRoles="Admins;" ModuleDefId="13" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="2" ShowMobile="false" />
+    <Module ModuleId="31" ModuleTitle="安全角色" EditRoles="Admins;" ModuleDefId="12" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="3" ShowMobile="false" />
+    <Module ModuleId="32" ModuleTitle="管理用户" EditRoles="Admins;" ModuleDefId="15" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="4" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="8" TabName="60厘米望远镜" AccessRoles="All Users;" TabOrder="3" ShowMobile="true" MobileTabName="">
+    <Module ModuleId="43" ModuleTitle="60厘米望远镜" EditRoles="Admins" ModuleDefId="17" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="9" TabName="太阳望远镜" AccessRoles="All Users;" TabOrder="5" ShowMobile="true" MobileTabName="">
+    <Module ModuleId="102" ModuleTitle="太阳望远镜" EditRoles="Admins" ModuleDefId="18" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="10" TabName="射电望远镜" AccessRoles="All Users;" TabOrder="7" ShowMobile="true" MobileTabName="">
+    <Module ModuleId="104" ModuleTitle="射电望远镜" EditRoles="Admins" ModuleDefId="19" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="11" TabName="关于我们" AccessRoles="All Users;" TabOrder="9" ShowMobile="true" MobileTabName="">
+    <Module ModuleId="106" ModuleTitle="友情链接" EditRoles="Admins" ModuleDefId="8" PaneName="LeftPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+    <Module ModuleId="107" ModuleTitle="网上天文共享平台简介" EditRoles="Admins" ModuleDefId="5" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+  </Tab>
+  <ModuleDefinition FriendlyName="Announcements" MobileSourceFile="MobileModules/Announcements.ascx" DesktopSourceFile="DesktopModules/Announcements.ascx" ModuleDefId="1" />
+  <ModuleDefinition FriendlyName="Contacts" MobileSourceFile="MobileModules/Contacts.ascx" DesktopSourceFile="DesktopModules/Contacts.ascx" ModuleDefId="2" />
+  <ModuleDefinition FriendlyName="Discussion" MobileSourceFile="" DesktopSourceFile="DesktopModules/Discussion.ascx" ModuleDefId="3" />
+  <ModuleDefinition FriendlyName="Events" MobileSourceFile="MobileModules/Events.ascx" DesktopSourceFile="DesktopModules/Events.ascx" ModuleDefId="4" />
+  <ModuleDefinition FriendlyName="Html Document" MobileSourceFile="MobileModules/text.ascx" DesktopSourceFile="DesktopModules/HtmlModule.ascx" ModuleDefId="5" />
+  <ModuleDefinition FriendlyName="Image" MobileSourceFile="" DesktopSourceFile="DesktopModules/ImageModule.ascx" ModuleDefId="6" />
+  <ModuleDefinition FriendlyName="Links" MobileSourceFile="MobileModules/Links.ascx" DesktopSourceFile="DesktopModules/Links.ascx" ModuleDefId="7" />
+  <ModuleDefinition FriendlyName="QuickLinks" MobileSourceFile="MobileModules/Links.ascx" DesktopSourceFile="DesktopModules/QuickLinks.ascx" ModuleDefId="8" />
+  <ModuleDefinition FriendlyName="XML/XSL" MobileSourceFile="" DesktopSourceFile="DesktopModules/XmlModule.ascx" ModuleDefId="9" />
+  <ModuleDefinition FriendlyName="Documents" MobileSourceFile="" DesktopSourceFile="DesktopModules/Document.ascx" ModuleDefId="10" />
+  <ModuleDefinition FriendlyName="Module Types (Admin)" MobileSourceFile="" DesktopSourceFile="Admin/ModuleDefs.ascx" ModuleDefId="11" />
+  <ModuleDefinition FriendlyName="Roles (Admin)" MobileSourceFile="" DesktopSourceFile="Admin/Roles.ascx" ModuleDefId="12" />
+  <ModuleDefinition FriendlyName="Tabs (Admin)" MobileSourceFile="" DesktopSourceFile="Admin/Tabs.ascx" ModuleDefId="13" />
+  <ModuleDefinition FriendlyName="Site Settings (Admin)" MobileSourceFile="" DesktopSourceFile="Admin/SiteSettings.ascx" ModuleDefId="14" />
+  <ModuleDefinition FriendlyName="Manage Users (Admin)" MobileSourceFile="" DesktopSourceFile="Admin/Users.ascx" ModuleDefId="15" />
+  <ModuleDefinition FriendlyName="KPWSample" MobileSourceFile="" DesktopSourceFile="DesktopModules/KPWModules/KPWSample.ascx" ModuleDefId="16" />
+  <ModuleDefinition FriendlyName="Kpw60Telescope" MobileSourceFile="" DesktopSourceFile="DesktopModules\KPWModules\Kpw60Telescope.ascx" ModuleDefId="17" />
+  <ModuleDefinition FriendlyName="KpwSolarTelescope" MobileSourceFile="" DesktopSourceFile="DesktopModules/KpwModules/KpwSolarTelescope.ascx" ModuleDefId="18" />
+  <ModuleDefinition FriendlyName="KpwRadioTelescope" MobileSourceFile="" DesktopSourceFile="DesktopModules/KPWModules/KpwRadioTelescope.ascx" ModuleDefId="19" />
+</SiteConfiguration>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="KpwStandAlone.KpwMain"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="KpwMain" Height="500" Width="600" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Margin="10,10,10,5">
+            <WrapPanel>
+                <Button Name="btnRaFH" Margin="5" Width="100" Content="赤经正向快动"  Click="btnRaFH_Click"/>
+                <Button Name="btnRaFL" Margin="5" Width="100" Content="赤经正向慢动" />
+                <Button Name="btnRaBH" Margin="5" Width="100" Content="赤经负向快动"/>
+                <Button Name="btnRaBL" Margin="5" Width="100" Content="赤经负向慢动"/>
+                <Button Name="btnRaStop" Margin="5" Width="100" Content="赤经停止" Click="btnRaStop_Click"/>
+                <Button Name="btnDecFH" Margin="5" Width="100" Content="赤纬正向快动"/>
+                <Button Name="btnDecFL" Margin="5" Width="100" Content="赤纬正向慢动"/>
+                <Button Name="btnDecBH" Margin="5" Width="100" Content="赤纬负向快动"/>
+                <Button Name="btnDecBL" Margin="5" Width="100" Content="赤纬负向慢动"/>
+                <Button Name="btnDecStop" Margin="5" Width="100" Content="赤纬停止"/>
+            </WrapPanel>
+        </Border>
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="10,5,10,5">
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnStartLicsening" Content="开始监听" Width="100" Margin="6" Click="btnStartLicsening_Click"/>
+                <Button Name="btnCloseLicsening" Content="关闭监听" Width="100" Margin="6" Click="btnCloseLicsening_Click"/>
+                <Button Name="btnRead" Content="读取数据" Width="100" Margin="6" Click="btnRead_Click"/>
+            </StackPanel>
+        </Border>
+        <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="1" Margin="10,5,10,10">
+            <TextBox Name="txtMessage"  VerticalScrollBarVisibility="Auto" Margin="10"/>
+        </Border>
+    </Grid>
+</Window>

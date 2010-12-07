@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KpwCommands Header="KPW:" ParameterWordCount="10" End="OK" Enter="&#xD;&#xA;">
+  <SubKpwCommandList>
+    <KpwCommand Name="RaForwardFast" Word="AXIS:" RealParameterWordCount="4" Command="+KTT" />
+    <KpwCommand Name="RaForwardSlow" Word="AXIS:" RealParameterWordCount="4" Command="+MTT" />
+    <KpwCommand Name="RaBackwardFast" Word="AXIS:" RealParameterWordCount="4" Command="-KTT" />
+    <KpwCommand Name="RaBackwardSlow" Word="AXIS:" RealParameterWordCount="4" Command="-MTT" />
+    <KpwCommand Name="DecForwardFast" Word="AXIS:" RealParameterWordCount="4" Command="+H+K" />
+    <KpwCommand Name="DecForwardSlow" Word="AXIS:" RealParameterWordCount="4" Command="+H+M" />
+    <KpwCommand Name="DecBackwardFast" Word="AXIS:" RealParameterWordCount="4" Command="+H-K" />
+    <KpwCommand Name="DecBackwardSlow" Word="AXIS:" RealParameterWordCount="4" Command="+H-M" />
+    <KpwCommand Name="RaStop" Word="AXIS:" RealParameterWordCount="4" Command="TTTT" />
+    <KpwCommand Name="DecStop" Word="AXIS:" RealParameterWordCount="4" Command="+HTT" />
+    <KpwCommand Name="FindStarByPosition" Word="FIND:" RealParameterWordCount="14" Command="{RA}{DEC}" />
+    <KpwCommand Name="FindStarByName" Word="STAR:" RealParameterWordCount="1" Command="1" />
+    <KpwCommand Name="StopFindStar" Word="CANC:" RealParameterWordCount="1" Command="1" />
+  </SubKpwCommandList>
+</KpwCommands>
