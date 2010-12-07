@@ -17,6 +17,11 @@ function FindStarByPosition(RaH,RaM,RaS,DecFlag,DecD,DecM,DecS) {
     $get("result").innerHTML = "坐标找星...";
 }
 
+function FindStarByPosition(position) {
+    WebApplication.KPWPortalWebService.FindStarByPosition(position, onSendCommandSucceeded);
+    $get("result").innerHTML = "坐标找星...";
+}
+
 function FindStarByName(name) {
     WebApplication.KPWPortalWebService.FindStarByName(name, onSendCommandSucceeded);
     $get("result").innerHTML = "星名找星...";

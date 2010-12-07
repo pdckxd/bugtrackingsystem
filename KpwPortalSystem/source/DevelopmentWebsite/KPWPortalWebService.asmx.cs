@@ -58,6 +58,47 @@ namespace WebApplication
             return DateTime.Now.ToShortTimeString();
         }
 
+
+        [WebMethod]
+        public bool FindStarByPosition(string position)
+        {
+            try
+            {
+                string[] array = position.Split(";".ToCharArray());
+
+                if (array.Length == 2)
+                {
+                    SocketCommandSender fss = new SocketCommandSender();
+
+                    float ra, dec;
+                    if (float.TryParse(array[0], out ra) && float.TryParse(array[1], out dec))
+                    {
+
+                        if (ra < 0 || ra > 24 || dec < -90 || dec > 90)
+                            return false;
+
+                        int Ra = (int)ra * 3600 * 15;
+                        int Dec = (int)dec * 3600;
+
+                        string DecFlag = "+";
+                        if (Dec < 0) DecFlag = "-";
+
+                        CommandMessage message = CommandMessage.FindStarByPosition;
+                        logger.Debug("Send Command. Msg:" + message.ToString());
+                        logger.Debug(string.Format("Ra:{0},Dec:{1}.", Ra.ToString("0000000"), DecFlag + Dec.ToString("000000")));
+                        fss.Send(message, new string[] { Ra.ToString("0000000"), DecFlag + Dec.ToString("000000") });
+                        return true;
+                    }
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Send command failed. Msg:" + CommandMessage.FindStarByName.ToString(), ex);
+                return false;
+            }
+        }
+
         //RA:0486000 DEC:+108000
         [WebMethod]
         public bool FindStarByPosition(string RaH,string RaM,string RaS,string DecFlag,string DecD,string DecM,string DecS)

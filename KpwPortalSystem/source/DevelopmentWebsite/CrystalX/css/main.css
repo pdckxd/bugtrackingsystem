@@ -131,4 +131,4 @@ code, kbd, samp {font-family:monospace; font-size:110%;}
     #createdby {position:absolute; top:10px; left:562px; margin:0; color:#8CA3D8;}
     #createdby a {color:#8CA3D8;}
     
-#ControlPanel {clear:both; height:230px; margin:0; padding:5px; background:url("../design/content_article_bg.jpg") 0 0 no-repeat;}
+#ControlPanel {clear:both; height:300px; margin:0; padding:5px; background:url("../design/content_article_bg.jpg") 0 0 no-repeat;}

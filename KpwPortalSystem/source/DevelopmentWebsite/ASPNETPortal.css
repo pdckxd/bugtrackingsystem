@@ -392,11 +392,11 @@ b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
     
 /*------------------------------------------------------------------------------------*/
 
-    .ContentBox
+   .ContentBox
     {
-    	font: bold 13px "Helvetica Neue";
+    	font: 12px "Helvetica Neue";
     	padding-top:3px;
-        height:30px;
+        height:23px;
     }
     
     .ContentInformation
