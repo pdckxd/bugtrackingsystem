@@ -21,6 +21,8 @@ namespace Nairc.KpwPortal.Website
             RenderMenuItem("主页", "Default.aspx", result);
             RenderMenuItem("望远镜控制台", "KpwControlPage.aspx", result);
             RenderMenuItem("用户设置", "Accounts/Users.aspx", result);
+            RenderMenuItem("我的预约", "MyObservationApply.aspx", result);
+            RenderMenuItem("预约管理", "ObservationApplyManagement.aspx", result);
             RenderMenuItem("关于", "About.aspx", result);
             return result.ToString();
         }

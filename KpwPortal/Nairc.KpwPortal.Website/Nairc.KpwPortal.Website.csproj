@@ -119,6 +119,20 @@
       <DependentUpon>MasterPage.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="MyObservationApply.aspx.cs">
+      <DependentUpon>MyObservationApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyObservationApply.aspx.designer.cs">
+      <DependentUpon>MyObservationApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObservationApplyManagement.aspx.cs">
+      <DependentUpon>ObservationApplyManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObservationApplyManagement.aspx.designer.cs">
+      <DependentUpon>ObservationApplyManagement.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +140,8 @@
     <Content Include="Accounts\Users.aspx" />
     <Content Include="KpwControlPage.aspx" />
     <Content Include="MasterPage.master" />
+    <Content Include="MyObservationApply.aspx" />
+    <Content Include="ObservationApplyManagement.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
