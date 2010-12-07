@@ -139,7 +139,7 @@ namespace Admin.Web
             PortalUser user = new PortalUser();
             user.UserID = userId;
             user.Email = Email.Text;
-            user.Password = Password.Text;
+            user.Password = PortalSecurity.Encrypt(Password.Text);
             facade.UpdateUser(user);
 
             // redirect to this page with the corrected querystring args

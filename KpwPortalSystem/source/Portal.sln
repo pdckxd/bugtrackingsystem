@@ -59,6 +59,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database Script", "Database
 	ProjectSection(SolutionItems) = preProject
 		..\database\Kpw_CreateDB.sql = ..\database\Kpw_CreateDB.sql
 		..\database\Portal_CreateDB.sql = ..\database\Portal_CreateDB.sql
+		..\database\Portal_LoadData.sql = ..\database\Portal_LoadData.sql
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YWXKPortal", "YWXKWebsite\YWXKPortal.csproj", "{3DDFA0BA-DEF7-401F-A6F1-59100F4DEBAD}"
@@ -161,8 +162,8 @@ Global
 		{3DDFA0BA-DEF7-401F-A6F1-59100F4DEBAD} = {A2107925-9269-4DD6-A879-527A5061F458}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		IsWCSFSolution = True
-		IsWCSFSolutionWAP = True
 		RootNamespace = ASPNET.StarterKit.Portal
+		IsWCSFSolutionWAP = True
+		IsWCSFSolution = True
 	EndGlobalSection
 EndGlobal
