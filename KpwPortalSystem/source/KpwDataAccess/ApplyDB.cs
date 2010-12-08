@@ -21,11 +21,12 @@ namespace Nairc.KpwDataAccess
 
             string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
                                 + "[ApplyStatus],[DateCreated]"
-                                + "FROM [Kpw_Images] WHERE [UserId]=@UserId";
+                                + "FROM [Kpw_Images] WHERE [UserId]=@UserId AND [ApplyDate] >= @Today";
 
             DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
 
             db.AddInParameter(dbCommand, "UserId", DbType.String, userId);
+            db.AddInParameter(dbCommand, "Today", DbType.DateTime, DateTime.Now.Date);
 
 
             // DataSet that will hold the returned results		
@@ -37,7 +38,10 @@ namespace Nairc.KpwDataAccess
                     {
                         ID = reader.GetInt32(0),
                         UserId = reader.GetString(1),
-                        
+                        ApplyDate = reader.GetDateTime(2),
+                        TimeRange = reader.GetInt32(3),
+                        ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                        CreatedDate = reader.GetDateTime(5)
                     });
                 }
             }
@@ -47,22 +51,116 @@ namespace Nairc.KpwDataAccess
 
         public IEnumerable<Nairc.KpwFramework.DataModel.Apply> GetAppliesByDate(DateTime date)
         {
-            throw new NotImplementedException();
+            List<Apply> applies = new List<Apply>();
+
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + "FROM [Kpw_Images] WHERE [ApplyDate] = @Today";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "Today", DbType.DateTime, date);
+
+
+            // DataSet that will hold the returned results		
+            using (IDataReader reader = db.ExecuteReader(dbCommand))
+            {
+                while (reader.Read())
+                {
+                    applies.Add(new Apply
+                    {
+                        ID = reader.GetInt32(0),
+                        UserId = reader.GetString(1),
+                        ApplyDate = reader.GetDateTime(2),
+                        TimeRange = reader.GetInt32(3),
+                        ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                        CreatedDate = reader.GetDateTime(5)
+                    });
+                }
+            }
+
+            return applies;
         }
 
         public IEnumerable<Nairc.KpwFramework.DataModel.Apply> GetCurrentApplies()
         {
-            throw new NotImplementedException();
+            List<Apply> applies = new List<Apply>();
+
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + "FROM [Kpw_Images] WHERE [ApplyDate] >= @Today";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "Today", DbType.DateTime, DateTime.Now.Date);
+
+
+            // DataSet that will hold the returned results		
+            using (IDataReader reader = db.ExecuteReader(dbCommand))
+            {
+                while (reader.Read())
+                {
+                    applies.Add(new Apply
+                    {
+                        ID = reader.GetInt32(0),
+                        UserId = reader.GetString(1),
+                        ApplyDate = reader.GetDateTime(2),
+                        TimeRange = reader.GetInt32(3),
+                        ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                        CreatedDate = reader.GetDateTime(5)
+                    });
+                }
+            }
+
+            return applies;
         }
 
         public int AddApply(Nairc.KpwFramework.DataModel.Apply apply)
         {
-            throw new NotImplementedException();
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "INSERT INTO [Kpw_Applies] ([UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + " VALUES(@UserId,@ApplyDate,@TimeRange,@ApplyStatus,@DateCreated)";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "UserId", DbType.String, apply.UserId);
+            db.AddInParameter(dbCommand, "ApplyDate", DbType.DateTime, apply.ApplyDate);
+            db.AddInParameter(dbCommand, "TimeRange", DbType.Int32, apply.TimeRange);
+            db.AddInParameter(dbCommand, "ApplyStatus", DbType.Int32, apply.ApplyStatus);
+            db.AddInParameter(dbCommand, "DateCreated", DbType.DateTime, apply.CreatedDate);
+
+            return db.ExecuteNonQuery(dbCommand);
         }
 
         public void UpdateApply(Nairc.KpwFramework.DataModel.Apply apply)
         {
-            throw new NotImplementedException();
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "UPDATE [Kpw_Applies]"
+                                  + "SET [UserId] = @UserId"
+                                     + ",[ApplyDate] = @ApplyDate"
+                                      + ",[TimeRange] = @TimeRange"
+                                      + ",[ApplyStatus] = @ApplyStatus"
+                                      + ",[DateCreated] = @DateCreated"
+                                      + " WHERE [ID] = @ID";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            // Retrieve products from the specified category.
+            db.AddInParameter(dbCommand, "ID", DbType.Int32, apply.ID);
+            db.AddInParameter(dbCommand, "UserId", DbType.String, apply.UserId);
+            db.AddInParameter(dbCommand, "ApplyDate", DbType.DateTime, apply.ApplyDate);
+            db.AddInParameter(dbCommand, "TimeRange", DbType.Int32, apply.TimeRange);
+            db.AddInParameter(dbCommand, "ApplyStatus", DbType.Int32, apply.ApplyStatus);
+            db.AddInParameter(dbCommand, "DateCreated", DbType.DateTime, apply.CreatedDate);
+
+            db.ExecuteNonQuery(dbCommand);
         }
 
         #endregion
