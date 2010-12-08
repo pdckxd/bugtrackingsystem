@@ -6,6 +6,11 @@ IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Kpw_I
 DROP TABLE [dbo].[Kpw_Images]
 GO
 
+/****** Object:  Table [dbo].[Kpw_Images]    Script Date: 05/13/2010 22:53:44 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Kpw_Applies]') AND type in (N'U'))
+DROP TABLE [dbo].[Kpw_Applies]
+GO
+
 USE [Portal]
 GO
 
@@ -29,6 +34,17 @@ CREATE TABLE [dbo].[Kpw_Images](
 	[Dec] [int] NULL,
 	[CreateBy] [nvarchar](50) NOT NULL,
 	[CreateDate] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[Kpw_Applies](
+	[ID] [int] IDENTITY NOT NULL,
+	[UserId] [nvarchar](100) NOT NULL,
+	[ApplyDate] [datetime] NOT NULL,
+	[TimeRange] [int] NOT NULL,
+	[ApplyStatus] [int] NOT NULL,
+	[DateCreated] [datetime] NOT NULL
 ) ON [PRIMARY]
 
 GO

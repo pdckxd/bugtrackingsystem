@@ -57,6 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplyDB.cs" />
+    <Compile Include="Interfaces\IAppliesManagement.cs" />
     <Compile Include="ImageInfoDB.cs" />
     <Compile Include="Interfaces\IImageInfoDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

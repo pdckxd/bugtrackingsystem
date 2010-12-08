@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apply.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="ICommandSender.cs" />
     <Compile Include="ImageDetail.cs" />
