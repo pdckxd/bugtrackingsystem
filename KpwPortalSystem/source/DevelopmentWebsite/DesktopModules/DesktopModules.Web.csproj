@@ -255,6 +255,13 @@
     <Compile Include="KPWModules\KpwSolarTelescope.ascx.designer.cs">
       <DependentUpon>KpwSolarTelescope.ascx</DependentUpon>
     </Compile>
+    <Compile Include="KPWModules\MyApplies.ascx.cs">
+      <DependentUpon>MyApplies.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\MyApplies.ascx.designer.cs">
+      <DependentUpon>MyApplies.ascx</DependentUpon>
+    </Compile>
     <Compile Include="KPWModules\VideoPlayer.ascx.cs">
       <DependentUpon>VideoPlayer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +334,7 @@
     <Content Include="KPWModules\KpwRadioTelescope.ascx" />
     <Content Include="KPWModules\KPWSample.ascx" />
     <Content Include="KPWModules\KpwSolarTelescope.ascx" />
+    <Content Include="KPWModules\MyApplies.ascx" />
     <Content Include="KPWModules\VideoPlayer.ascx" />
     <Content Include="Links.ascx" />
     <Content Include="QuickLinks.ascx" />
@@ -386,7 +394,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties IsWebProject="true" IsFolderOfRootWebProject="true" />
+      <UserProperties IsFolderOfRootWebProject="true" IsWebProject="true" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
