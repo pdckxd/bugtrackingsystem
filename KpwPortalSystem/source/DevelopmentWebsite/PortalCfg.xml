@@ -7,7 +7,7 @@
     <Module ModuleId="83" ModuleTitle="天气" EditRoles="Admins" ModuleDefId="5" PaneName="RightPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
     <Module ModuleId="84" ModuleTitle="天文观测预告" EditRoles="Admins" ModuleDefId="5" PaneName="RightPane" CacheTimeout="0" ModuleOrder="3" ShowMobile="false" />
   </Tab>
-  <Tab TabId="6" TabName="管理" AccessRoles="Admins;" TabOrder="11" ShowMobile="false" MobileTabName="Admin">
+  <Tab TabId="6" TabName="管理" AccessRoles="Admins;" TabOrder="13" ShowMobile="false" MobileTabName="Admin">
     <Module ModuleId="28" ModuleTitle="模块定义" EditRoles="Admins;" ModuleDefId="11" PaneName="RightPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
     <Module ModuleId="29" ModuleTitle="站点设置" EditRoles="Admins;" ModuleDefId="14" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
     <Module ModuleId="30" ModuleTitle="Tabs" EditRoles="Admins;" ModuleDefId="13" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="2" ShowMobile="false" />
@@ -26,6 +26,9 @@
   <Tab TabId="11" TabName="关于我们" AccessRoles="All Users;" TabOrder="9" ShowMobile="true" MobileTabName="">
     <Module ModuleId="106" ModuleTitle="友情链接" EditRoles="Admins" ModuleDefId="8" PaneName="LeftPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
     <Module ModuleId="107" ModuleTitle="网上天文共享平台简介" EditRoles="Admins" ModuleDefId="5" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
+  </Tab>
+  <Tab TabId="12" TabName="我的预约" AccessRoles="Admins;望远镜操作员;" TabOrder="11" ShowMobile="true" MobileTabName="">
+    <Module ModuleId="108" ModuleTitle="我的预约" EditRoles="Admins" ModuleDefId="20" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
   </Tab>
   <ModuleDefinition FriendlyName="Announcements" MobileSourceFile="MobileModules/Announcements.ascx" DesktopSourceFile="DesktopModules/Announcements.ascx" ModuleDefId="1" />
   <ModuleDefinition FriendlyName="Contacts" MobileSourceFile="MobileModules/Contacts.ascx" DesktopSourceFile="DesktopModules/Contacts.ascx" ModuleDefId="2" />
@@ -46,4 +49,6 @@
   <ModuleDefinition FriendlyName="Kpw60Telescope" MobileSourceFile="" DesktopSourceFile="DesktopModules\KPWModules\Kpw60Telescope.ascx" ModuleDefId="17" />
   <ModuleDefinition FriendlyName="KpwSolarTelescope" MobileSourceFile="" DesktopSourceFile="DesktopModules/KpwModules/KpwSolarTelescope.ascx" ModuleDefId="18" />
   <ModuleDefinition FriendlyName="KpwRadioTelescope" MobileSourceFile="" DesktopSourceFile="DesktopModules/KPWModules/KpwRadioTelescope.ascx" ModuleDefId="19" />
+  <ModuleDefinition FriendlyName="我的预约" MobileSourceFile="" DesktopSourceFile="DesktopModules/KPWModules/MyApplies.ascx" ModuleDefId="20" />
+  <ModuleDefinition FriendlyName="预约管理" MobileSourceFile="" DesktopSourceFile="DesktopModules/KPWModules/AppliesManagement.ascx" ModuleDefId="21" />
 </SiteConfiguration>

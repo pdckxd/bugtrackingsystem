@@ -21,7 +21,7 @@ namespace Nairc.KpwDataAccess
 
             string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
                                 + "[ApplyStatus],[DateCreated]"
-                                + "FROM [Kpw_Images] WHERE [UserId]=@UserId AND [ApplyDate] >= @Today";
+                                + "FROM [Kpw_Applies] WHERE [UserId]=@UserId AND [ApplyDate] >= @Today";
 
             DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
 
@@ -57,7 +57,7 @@ namespace Nairc.KpwDataAccess
 
             string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
                                 + "[ApplyStatus],[DateCreated]"
-                                + "FROM [Kpw_Images] WHERE [ApplyDate] = @Today";
+                                + "FROM [Kpw_Applies] WHERE [ApplyDate] = @Today";
 
             DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
 
@@ -92,7 +92,7 @@ namespace Nairc.KpwDataAccess
 
             string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
                                 + "[ApplyStatus],[DateCreated]"
-                                + "FROM [Kpw_Images] WHERE [ApplyDate] >= @Today";
+                                + "FROM [Kpw_Applies] WHERE [ApplyDate] >= @Today";
 
             DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
 
@@ -124,7 +124,7 @@ namespace Nairc.KpwDataAccess
             Database db = DatabaseFactory.CreateDatabase();
 
             string sqlCommand = "INSERT INTO [Kpw_Applies] ([UserId],[ApplyDate],[TimeRange],"
-                                + "[ApplyStatus],[DateCreated]"
+                                + "[ApplyStatus],[DateCreated])"
                                 + " VALUES(@UserId,@ApplyDate,@TimeRange,@ApplyStatus,@DateCreated)";
 
             DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
@@ -159,6 +159,101 @@ namespace Nairc.KpwDataAccess
             db.AddInParameter(dbCommand, "TimeRange", DbType.Int32, apply.TimeRange);
             db.AddInParameter(dbCommand, "ApplyStatus", DbType.Int32, apply.ApplyStatus);
             db.AddInParameter(dbCommand, "DateCreated", DbType.DateTime, apply.CreatedDate);
+
+            db.ExecuteNonQuery(dbCommand);
+        }
+
+        #endregion
+
+        #region IAppliesManagement Members
+
+
+        public Apply GetApplyByTimeRange(DateTime date, int range)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + "FROM [Kpw_Applies] WHERE [ApplyDate]=@Date AND [TimeRange]=@TimeRange";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "Date", DbType.DateTime, date);
+            db.AddInParameter(dbCommand, "TimeRange", DbType.Int32, range);
+
+
+            // DataSet that will hold the returned results		
+            using (IDataReader reader = db.ExecuteReader(dbCommand))
+            {
+                if (reader.Read())
+                {
+                    return new Apply
+                     {
+                         ID = reader.GetInt32(0),
+                         UserId = reader.GetString(1),
+                         ApplyDate = reader.GetDateTime(2),
+                         TimeRange = reader.GetInt32(3),
+                         ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                         CreatedDate = reader.GetDateTime(5)
+                     };
+                }
+            }
+
+            return null;
+
+        }
+
+        #endregion
+
+        #region IAppliesManagement Members
+
+
+        public IEnumerable<Apply> GetMyApplies(DateTime date, string userId)
+        {
+            List<Apply> applies = new List<Apply>();
+
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + "FROM [Kpw_Applies] WHERE [UserId]=@UserId AND [ApplyDate] = @Today";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "UserId", DbType.String, userId);
+            db.AddInParameter(dbCommand, "Today", DbType.DateTime, date);
+
+
+            // DataSet that will hold the returned results		
+            using (IDataReader reader = db.ExecuteReader(dbCommand))
+            {
+                while (reader.Read())
+                {
+                    applies.Add(new Apply
+                    {
+                        ID = reader.GetInt32(0),
+                        UserId = reader.GetString(1),
+                        ApplyDate = reader.GetDateTime(2),
+                        TimeRange = reader.GetInt32(3),
+                        ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                        CreatedDate = reader.GetDateTime(5)
+                    });
+                }
+            }
+
+            return applies;
+        }
+
+        public void DeleteApply(int id)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "delete from Kpw_Applies WHERE [ID] = @ID";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            // Retrieve products from the specified category.
+            db.AddInParameter(dbCommand, "ID", DbType.Int32, id);
 
             db.ExecuteNonQuery(dbCommand);
         }

@@ -185,6 +185,13 @@
     <Compile Include="ImageModule.ascx.designer.cs">
       <DependentUpon>ImageModule.ascx</DependentUpon>
     </Compile>
+    <Compile Include="KPWModules\AppliesManagement.ascx.cs">
+      <DependentUpon>AppliesManagement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\AppliesManagement.ascx.designer.cs">
+      <DependentUpon>AppliesManagement.ascx</DependentUpon>
+    </Compile>
     <Compile Include="KPWModules\ImageGalleryEx.aspx.cs">
       <DependentUpon>ImageGalleryEx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -324,6 +331,7 @@
     <Content Include="Events.ascx" />
     <Content Include="HtmlModule.ascx" />
     <Content Include="ImageModule.ascx" />
+    <Content Include="KPWModules\AppliesManagement.ascx" />
     <Content Include="KPWModules\ImageGalleryEx.aspx" />
     <Content Include="KPWModules\ImagesGallery.aspx" />
     <Content Include="KPWModules\Kpw60Camera.ascx" />
@@ -394,7 +402,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties IsFolderOfRootWebProject="true" IsWebProject="true" />
+      <UserProperties IsWebProject="true" IsFolderOfRootWebProject="true" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
