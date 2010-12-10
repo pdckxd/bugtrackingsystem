@@ -46,8 +46,7 @@ namespace DesktopModules.Web
                 e.Row.Cells[5].Text = "批准申请";
             else if (e.Row.Cells[4].Text == "批准")
                 e.Row.Cells[5].Text = "取消申请";
-            else
-                e.Row.Cells[5].Controls.Clear();
+           
         }
 
         private void LoadCurrentApplies()
