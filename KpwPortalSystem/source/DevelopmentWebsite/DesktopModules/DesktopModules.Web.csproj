@@ -192,6 +192,7 @@
     <Compile Include="KPWModules\AppliesManagement.ascx.designer.cs">
       <DependentUpon>AppliesManagement.ascx</DependentUpon>
     </Compile>
+    <Compile Include="KPWModules\Helper.cs" />
     <Compile Include="KPWModules\ImageGalleryEx.aspx.cs">
       <DependentUpon>ImageGalleryEx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -402,7 +403,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties IsWebProject="true" IsFolderOfRootWebProject="true" />
+      <UserProperties IsFolderOfRootWebProject="true" IsWebProject="true" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

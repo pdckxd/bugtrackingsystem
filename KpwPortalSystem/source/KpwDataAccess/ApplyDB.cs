@@ -259,5 +259,42 @@ namespace Nairc.KpwDataAccess
         }
 
         #endregion
+
+        #region IAppliesManagement Members
+
+
+        public Apply GetApplyById(int id)
+        {
+            Database db = DatabaseFactory.CreateDatabase();
+
+            string sqlCommand = "SELECT [ID],[UserId],[ApplyDate],[TimeRange],"
+                                + "[ApplyStatus],[DateCreated]"
+                                + "FROM [Kpw_Applies] WHERE [ID]=@id";
+
+            DbCommand dbCommand = db.GetSqlStringCommand(sqlCommand);
+
+            db.AddInParameter(dbCommand, "id", DbType.Int32, id);
+
+            // DataSet that will hold the returned results		
+            using (IDataReader reader = db.ExecuteReader(dbCommand))
+            {
+                if (reader.Read())
+                {
+                    return new Apply
+                    {
+                        ID = reader.GetInt32(0),
+                        UserId = reader.GetString(1),
+                        ApplyDate = reader.GetDateTime(2),
+                        TimeRange = reader.GetInt32(3),
+                        ApplyStatus = (ApplyStatus)reader.GetInt32(4),
+                        CreatedDate = reader.GetDateTime(5)
+                    };
+                }
+            }
+
+            return null;
+        }
+
+        #endregion
     }
 }

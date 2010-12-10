@@ -16,5 +16,6 @@ namespace Nairc.KpwDataAccess
         void UpdateApply(Apply apply);
         void DeleteApply(int id);
         Apply GetApplyByTimeRange(DateTime date, int range);
+        Apply GetApplyById(int id);
     }
 }
