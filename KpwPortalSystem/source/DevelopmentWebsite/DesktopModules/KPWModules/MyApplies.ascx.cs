@@ -49,13 +49,13 @@ namespace DesktopModules.Web
 
                 if (checkbox.Enabled == true)
                 {
-                    var apply = db.GetApplyByTimeRange(date, i);
+                    var applies = db.GetApplyByTimeRange(HttpContext.Current.User.Identity.Name, date, i, ApplyStatus.Submitted);
 
                     if (checkbox.Checked)
                     {
-                        if (apply == null)
+                        if (applies.Count()==0)
                         {
-                            apply = new Apply()
+                            var apply = new Apply()
                             {
                                 UserId = HttpContext.Current.User.Identity.Name,
                                 ApplyDate = date,
@@ -69,8 +69,8 @@ namespace DesktopModules.Web
                     }
                     else
                     {
-                        if (apply != null)
-                            db.DeleteApply(apply.ID);
+                        if (applies.Count() > 0)
+                            db.DeleteApply(applies.First().ID);
                     }
                 }
             }
@@ -90,7 +90,7 @@ namespace DesktopModules.Web
 
             foreach (var item in applies)
             {
-                if (item.ApplyStatus == ApplyStatus.Submitted)
+                if (item.ApplyStatus == ApplyStatus.Submitted && item.UserId == HttpContext.Current.User.Identity.Name)
                 {
                     FindCheckBox(item.TimeRange).Checked = true;
                 }
@@ -105,6 +105,10 @@ namespace DesktopModules.Web
                         FindCheckBox(item.TimeRange).Checked = true;
                     }
                 }
+                //else
+                //{
+                //    FindCheckBox(item.TimeRange).Enabled = false;
+                //}
             }
         }
 

@@ -15,7 +15,7 @@ namespace Nairc.KpwDataAccess
         int AddApply(Apply apply);
         void UpdateApply(Apply apply);
         void DeleteApply(int id);
-        Apply GetApplyByTimeRange(DateTime date, int range);
+        IEnumerable<Apply> GetApplyByTimeRange(DateTime date, int range, ApplyStatus status);
         Apply GetApplyById(int id);
     }
 }

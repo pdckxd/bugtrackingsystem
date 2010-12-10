@@ -25,17 +25,17 @@ namespace DesktopModules.Web
                 case 6:
                     return "5:00-6:00";
                 case 7:
-                    return "6:00-7:00";
+                    return "18:00-19:00";
                 case 8:
-                    return "7:00-8:00";
+                    return "19:00-20:00";
                 case 9:
-                    return "8:00-9:00";
+                    return "20:00-21:00";
                 case 10:
-                    return "9:00-10:00";
+                    return "21:00-22:00";
                 case 11:
-                    return "10:00-11:00";
+                    return "22:00-23:00";
                 default:
-                    return "11:00-12:00";
+                    return "23:00-24:00";
             }
         }
 

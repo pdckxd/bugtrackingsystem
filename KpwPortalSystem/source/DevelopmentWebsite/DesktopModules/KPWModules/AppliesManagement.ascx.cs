@@ -40,13 +40,60 @@ namespace DesktopModules.Web
 
         }
 
+        protected void GridView1_RowCommand(object sender,GridViewCommandEventArgs e)
+        {
+            int index = Convert.ToInt32(e.CommandArgument);
+
+            int id = int.Parse(GridView1.DataKeys[index].Value.ToString());
+            ApplyDB db = new ApplyDB();
+            Apply apply = db.GetApplyById(id);
+
+            if (apply != null && apply.ApplyStatus == ApplyStatus.Submitted)
+            {
+                apply.ApplyStatus = ApplyStatus.Approved;
+                db.UpdateApply(apply);
+
+                var applies = db.GetApplyByTimeRange(apply.ApplyDate, apply.TimeRange, ApplyStatus.Submitted);
+
+                foreach (var item in applies)
+                {
+                    item.ApplyStatus = ApplyStatus.Deactivated;
+                    db.UpdateApply(item);
+                }
+            }
+            else if (apply != null && apply.ApplyStatus == ApplyStatus.Approved)
+            {
+                apply.ApplyStatus = ApplyStatus.Deactivated;
+                db.UpdateApply(apply);
+            }
+            this.LoadCurrentApplies();
+
+            //if (e.CommandName == "Approve")
+            //{
+                
+
+            //}
+            //else if (e.CommandName == "Deactivate")
+            //{
+
+            //}
+        }
+
+
         protected void GridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if (e.Row.Cells[4].Text == "已申请")
-                e.Row.Cells[5].Text = "批准申请";
-            else if (e.Row.Cells[4].Text == "批准")
-                e.Row.Cells[5].Text = "取消申请";
-           
+            if (e.Row.RowIndex > -1)
+            {
+                if (e.Row.Cells[3].Text == "已申请")
+                    (e.Row.Cells[4].FindControl("cancelAction") as Button).Visible = false;
+                else if (e.Row.Cells[3].Text == "批准")
+                    (e.Row.Cells[4].FindControl("approveAction") as Button).Visible = false;
+                else
+                {
+                    (e.Row.Cells[4].FindControl("cancelAction") as Button).Visible = false;
+                    (e.Row.Cells[4].FindControl("approveAction") as Button).Visible = false;
+                }
+            }
         }
 
         private void LoadCurrentApplies()
@@ -60,6 +107,8 @@ namespace DesktopModules.Web
             var query = from q in applies
                         select new
                         {
+                            ID = q.ID,
+                            Name = q.UserId,
                             Date = q.ApplyDate,
                             TimeRange = Helper.GetTimeRange(q.TimeRange),
                             Status = Helper.GetStatus(q.ApplyStatus)
