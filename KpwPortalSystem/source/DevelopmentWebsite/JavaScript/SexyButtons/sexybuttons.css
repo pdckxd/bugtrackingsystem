@@ -431,7 +431,7 @@
 .sexybutton span.help			{ background-image: url(images/icons/silk/help.png) !important; }
 .sexybutton span.home			{ background-image: url(images/icons/silk/house.png) !important; }
 .sexybutton span.info			{ background-image: url(images/icons/silk/information.png) !important; }
-.sexybutton span.cut				{ background-image: url(images/icons/silk/cut.png) !important; }
+.sexybutton span.cut			{ background-image: url(images/icons/silk/cut.png) !important; }
 .sexybutton span.copy			{ background-image: url(images/icons/silk/page_white_copy.png) !important; }
 .sexybutton span.paste			{ background-image: url(images/icons/silk/paste_plain.png) !important; }
 .sexybutton span.erase			{ background-image: url(images/icons/silk/erase.png) !important; }
@@ -444,3 +444,6 @@
 .sexybutton span.cart			{ background-image: url(images/icons/silk/cart.png) !important; }
 .sexybutton span.wand			{ background-image: url(images/icons/silk/wand.png) !important; }
 .sexybutton span.wrench			{ background-image: url(images/icons/silk/wrench.png) !important; }
+.sexybutton span.camerapicture  { background-image: url(images/icons/silk/camera_picture.png) !important; }
+.sexybutton span.camerastart	{ background-image: url(images/icons/silk/camera_start.png) !important; }
+.sexybutton span.camerastop		{ background-image: url(images/icons/silk/camera_stop.png) !important; }

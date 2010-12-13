@@ -55,3 +55,31 @@ function onTakePictureSucceeded(result) {
     $("#vPlayer").hide();
     $get("result").innerHTML = "";
 }
+
+
+function CatchImage() {
+
+    //var Netocx1 = document.getElementById("NetOCX1");
+    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
+    $get("txtFolderMessge").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles";
+}
+
+function StartVideo() {
+
+    $get("txtFolderMessge").innerHTML = "开始录像....";
+    //var Netocx1 = document.getElementById("NetOCX1");
+    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
+    $get("txtFolderMessge").innerHTML = "正在录像....";
+    $("#btnStartVideo").hide();
+    $("#btnStopVideo").show();
+}
+
+function StopVideo() {
+
+    // var Netocx1 = document.getElementById("NetOCX1");
+    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
+    $("#btnStartVideo").show();
+    $("#btnStopVideo").hide();
+    $get("txtFolderMessge").innerHTML = "视频保存在文件夹 C:\\kpw\\OCXVideoCaptureFiles";
+    
+}

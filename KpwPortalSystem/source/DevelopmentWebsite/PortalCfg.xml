@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <SiteConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/PortalCfg.xsd">
-  <Global PortalId="0" PortalName="深圳市气象局网上天文共享平台（测试版）" AlwaysShowEditButton="false" />
+  <Global PortalId="0" PortalName="西涌天文台网上天文共享平台（测试版）" AlwaysShowEditButton="false" />
   <Tab TabId="1" TabName="主页" AccessRoles="All Users;" TabOrder="1" ShowMobile="true" MobileTabName="Home">
     <Module ModuleId="1" ModuleTitle="QuickLinks" EditRoles="Admins;" ModuleDefId="8" PaneName="LeftPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />
     <Module ModuleId="64" ModuleTitle="中科院南京天文仪器有限公司" EditRoles="Admins" ModuleDefId="5" PaneName="ContentPane" CacheTimeout="0" ModuleOrder="1" ShowMobile="false" />

@@ -82,6 +82,7 @@
          Netocx1.StopRealPlay();
          Netocx1.Logout();
      }
+
   
 </script>
  
@@ -102,14 +103,17 @@
 		  standby="Waiting..." id="NetOCX1"  name="ocx1" width="530" height="400" align="center" ></object>
                                     </td>
                                     </tr>
-                                    <%--<tr>
-                                    <td align="left" style="display:none;">
-                                    <button id="Button6" type="reset" class="sexybutton" onclick="Play1()">
-                                                            <span><span><span class="play">预览</span></span></span></button>
-                                    <button id="Button7" type="reset" class="sexybutton" onclick="Stop1()">
-                                                            <span><span><span class="stop">停止</span></span></span></button>
+                                    <tr>
+                                    <td align="left">
+                                    <button id="btnCatchImage" type="reset" class="sexybutton" onclick="CatchImage()">
+                                                            <span><span><span class="camerapicture">抓图</span></span></span></button>&nbsp;&nbsp;
+                                    <button id="btnStartVideo" type="reset" class="sexybutton" onclick="StartVideo()">
+                                                            <span><span><span class="camerastart" >开始录像</span></span></span></button>
+                                    <button id="btnStopVideo" type="reset" class="sexybutton" onclick="StopVideo()" style=" display:none">
+                                                            <span><span><span class="camerastop">停止录像</span></span></span></button>
+                                    <div id="txtFolderMessge" style="color:Red"></div>
                                     </td>
-                                    </tr>--%>
+                                    </tr>
                                     </table>
                                     <%--<whPlayer:vaPlayer ID="videoPlayer" autoStart="true" runat="server">
                                     </whPlayer:vaPlayer>--%>                                   
