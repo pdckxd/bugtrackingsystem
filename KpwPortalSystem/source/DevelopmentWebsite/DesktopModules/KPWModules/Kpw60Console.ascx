@@ -100,7 +100,7 @@
                                     <tr>
                                     <td>
                                      <object classid="clsid:CAFCF48D-8E34-4490-8154-026191D73924" codebase="../codebase/NetVideoActiveX23.cab#version=2,3,9,1"
-		  standby="Waiting..." id="NetOCX1"  name="ocx1" width="530" height="400" align="center" ></object>
+		  standby="Waiting..." id="NetOCX1"  name="ocx1" width="530" height="360" align="center" ></object>
                                     </td>
                                     </tr>
                                     <tr>
