@@ -31,7 +31,7 @@ INSERT INTO Portal_Discussion (ModuleID, Title, Body, DisplayOrder, CreatedByUse
 -- insert default Portal data
 INSERT INTO Portal_Roles (PortalID,RoleName) VALUES (0,'Admins')
 INSERT INTO Portal_Roles (PortalID,RoleName) VALUES (0,'ÍûÔ¶¾µ²Ù×÷Ô±')
-INSERT INTO Portal_Users (Name, Password, Email) VALUES ('Guest','D0-09-1A-0F-E2-B2-09-34-D8-8B-46-06-84-F5-97-89','guest')
+INSERT INTO Portal_Users (Name, Password, Email) VALUES ('admin','19-A2-85-41-44-B6-3A-8F-76-17-A6-F2-25-01-9B-12','admin')
 INSERT INTO Portal_UserRoles (UserID,RoleID) VALUES (1,0)
 
 INSERT INTO Portal_Links (ModuleID,CreatedByUser,CreatedDate,Title,Url,MobileUrl,ViewOrder,Description) VALUES (1,'JennaJ@ibuyspy.com','2001-12-20 14:41:40.840','ASP.NET Site','http://www.asp.net','',1,'')

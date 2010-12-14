@@ -20,5 +20,27 @@ namespace Nairc.KpwFramework.DataModel
         public int TimeRange { get; set; }
         public ApplyStatus ApplyStatus { get; set; }
         public DateTime CreatedDate { get; set; }
+
+        public DateTime TimeFrom
+        {
+            get
+            {
+                if (TimeRange < 7)
+                    return this.ApplyDate.AddHours(TimeRange - 1);
+                else
+                    return this.ApplyDate.AddHours(12 + TimeRange -1);
+            }
+        }
+
+        public DateTime TimeTo
+        {
+            get
+            {
+                if (TimeRange < 7)
+                    return this.ApplyDate.AddHours(TimeRange);
+                else
+                    return this.ApplyDate.AddHours(12 + TimeRange);
+            }
+        }
     }
 }

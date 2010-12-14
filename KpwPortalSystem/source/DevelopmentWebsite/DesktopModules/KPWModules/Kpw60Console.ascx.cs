@@ -53,7 +53,8 @@ namespace DesktopModules.Web
             //this.videoPlayer.sourceUrl = "http://159.226.75.28:8040";
 
             //videoPlayer.autoStart = true;
-            if (HttpContext.Current.User.IsInRole("望远镜操作员"))
+            if (HttpContext.Current.User.IsInRole("望远镜操作员") 
+                && new ObservationManagementFacade().IsUserCanObservation(HttpContext.Current.User.Identity.Name))
             {
                 this.noRights.Visible = false;
                 this.hasRights.Visible = true;

@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div id="ControlPanel">
-                        <div id="noRights" visible="false" runat="server" align="center" style="height:230px; vertical-align:middle; color:Red; font-size:15px;">您不是望远镜操作员，不能操作望远镜!</div>
+                        <div id="noRights" visible="false" runat="server" align="center" style="height:230px; vertical-align:middle; color:Red; font-size:15px;">您未授权观测，不能操作望远镜!</div>
                         <div id="hasRights" runat="server" style="height:300px;">
                             <table style="width: 100%; height: 100%; vertical-align: top">
                                 <tr>

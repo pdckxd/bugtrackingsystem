@@ -61,12 +61,17 @@
     <Compile Include="KpwCommand.cs" />
     <Compile Include="KpwHelper.cs" />
     <Compile Include="KpwRuntime.cs" />
+    <Compile Include="ObservationManagementFacade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="KpwTcpClient.cs" />
     <Compile Include="SocketCommandSender.cs" />
     <Compile Include="TcpServer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KpwDataAccess\KpwDataAccess.csproj">
+      <Project>{A236F3DB-A6EF-413E-ACCF-7B7AF3E66FEA}</Project>
+      <Name>KpwDataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\KpwDataModel\KpwDataModel.csproj">
       <Project>{7F85FA36-0478-4EED-BEC4-2C9F23B674FC}</Project>
       <Name>KpwDataModel</Name>
