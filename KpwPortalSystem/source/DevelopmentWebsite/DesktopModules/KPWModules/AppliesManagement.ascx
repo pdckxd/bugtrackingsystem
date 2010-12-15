@@ -20,7 +20,7 @@
             <asp:BoundField HeaderText="状态" DataField="Status">
             <HeaderStyle Width="120px" />
             </asp:BoundField>
-            <asp:TemplateField HeaderText="预约批准" HeaderStyle-Width="100px">
+            <asp:TemplateField HeaderText="预约批准" HeaderStyle-Width="80px">
             <ItemTemplate>
             <asp:Button ID="approveAction" runat="server" Text="批准申请" CommandName="Approve" 
       CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" ></asp:Button>

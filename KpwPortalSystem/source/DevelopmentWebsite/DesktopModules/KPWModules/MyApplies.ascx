@@ -9,18 +9,27 @@
     });
     </script>
 
-<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
-    <ContentTemplate>
+
         <div>
             <h4>
                 观测预约申请</h4>
             <hr />
         </div>
-        <table style="width: 100%;">
-            <tr>
+        <div>
+        <table>
+         <tr>
                 <td colspan="6">
                     选择日期:
                     <input type="text" id="datepicker" runat="server" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+            </tr>
+        </table>
+        </div>
+<asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+    <ContentTemplate>
+        <table style="width: 100%;">
+           <tr>
+                <td colspan="6">
                     <asp:Button ID="btnOk" runat="server" Text="查询预约" onclick="btnOk_Click" />
                 </td>
             </tr>

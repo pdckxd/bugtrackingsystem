@@ -18,7 +18,7 @@ namespace DesktopModules.Web
             if (!IsPostBack)
             {
                 if (this.datepicker.Value.Length == 0)
-                    this.datepicker.Value = DateTime.Now.ToShortDateString();
+                    this.datepicker.Value = DateTime.Now.Date.ToShortDateString();
 
                 this.SearchAppliesByDate(DateTime.Now.Date);
                 this.LoadMyApplies();
