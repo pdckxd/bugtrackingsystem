@@ -110,7 +110,7 @@ namespace DesktopModules.Web
                             ID = q.ID,
                             Name = q.UserId,
                             Date = q.ApplyDate,
-                            TimeRange = Helper.GetTimeRange(q.TimeRange),
+                            TimeRange = Helper.TimeRangeArray[q.TimeRange],
                             Status = Helper.GetStatus(q.ApplyStatus)
                         };
             this.GridView1.DataSource = query;

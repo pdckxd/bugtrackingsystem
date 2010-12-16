@@ -13,6 +13,28 @@ namespace DesktopModules.Web
 {
     public partial class MyApplies : PortalModuleControl
     {
+        private CheckBox[] TimeRangeCheckBoxs
+        {
+            get
+            {
+                return new CheckBox[]{
+                    CheckBox1,
+                    CheckBox1,
+                    CheckBox2,
+                    CheckBox3,
+                    CheckBox4,
+                    CheckBox5,
+                    CheckBox6,
+                    CheckBox7,
+                    CheckBox8,
+                    CheckBox9,
+                    CheckBox10,
+                    CheckBox11,
+                    CheckBox12
+                };
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -45,7 +67,7 @@ namespace DesktopModules.Web
 
             for (int i = 0; i < 13; i++)
             {
-                var checkbox = FindCheckBox(i);
+                var checkbox = TimeRangeCheckBoxs[i];
 
                 if (checkbox.Enabled == true)
                 {
@@ -92,17 +114,17 @@ namespace DesktopModules.Web
             {
                 if (item.ApplyStatus == ApplyStatus.Submitted && item.UserId == HttpContext.Current.User.Identity.Name)
                 {
-                    FindCheckBox(item.TimeRange).Checked = true;
+                    TimeRangeCheckBoxs[item.TimeRange].Checked = true;
                 }
                 else if (item.ApplyStatus == ApplyStatus.Approved)
                 {
-                    FindCheckBox(item.TimeRange).Enabled = false;
+                    TimeRangeCheckBoxs[item.TimeRange].Enabled = false;
 
                     var myapples = db.GetMyApplies(date, HttpContext.Current.User.Identity.Name);
 
                     if (myapples.Select(x => x.ID == item.ID).Any())
                     {
-                        FindCheckBox(item.TimeRange).Checked = true;
+                        TimeRangeCheckBoxs[item.TimeRange].Checked = true;
                     }
                 }
                 //else
@@ -114,72 +136,10 @@ namespace DesktopModules.Web
 
         private void ClearCheckbox()
         {
-            this.CheckBox1.Enabled = true;
-            this.CheckBox1.Checked = false;
-
-            this.CheckBox2.Enabled = true;
-            this.CheckBox2.Checked = false;
-
-            this.CheckBox3.Enabled = true;
-            this.CheckBox3.Checked = false;
-
-            this.CheckBox4.Enabled = true;
-            this.CheckBox4.Checked = false;
-
-            this.CheckBox5.Enabled = true;
-            this.CheckBox5.Checked = false;
-
-            this.CheckBox6.Enabled = true;
-            this.CheckBox6.Checked = false;
-
-            this.CheckBox7.Enabled = true;
-            this.CheckBox7.Checked = false;
-
-            this.CheckBox8.Enabled = true;
-            this.CheckBox8.Checked = false;
-
-            this.CheckBox9.Enabled = true;
-            this.CheckBox9.Checked = false;
-
-            this.CheckBox10.Enabled = true;
-            this.CheckBox10.Checked = false;
-
-            this.CheckBox11.Enabled = true;
-            this.CheckBox11.Checked = false;
-
-            this.CheckBox12.Enabled = true;
-            this.CheckBox12.Checked = false;
-
-        }
-
-        private CheckBox FindCheckBox(int i)
-        {
-            switch (i)
+            foreach (var item in this.TimeRangeCheckBoxs)
             {
-                case 1:
-                    return this.CheckBox1;
-                case 2:
-                    return this.CheckBox2;
-                case 3:
-                    return this.CheckBox3;
-                case 4:
-                    return this.CheckBox4;
-                case 5:
-                    return this.CheckBox5;
-                case 6:
-                    return this.CheckBox6;
-                case 7:
-                    return this.CheckBox7;
-                case 8:
-                    return this.CheckBox8;
-                case 9:
-                    return this.CheckBox9;
-                case 10:
-                    return this.CheckBox10;
-                case 11:
-                    return this.CheckBox11;
-                default:
-                    return this.CheckBox12;
+                item.Enabled = true;
+                item.Checked = false;
             }
         }
 
@@ -195,7 +155,7 @@ namespace DesktopModules.Web
                         select new
                         {
                             Date = q.ApplyDate,
-                            TimeRange = Helper.GetTimeRange(q.TimeRange),
+                            TimeRange = Helper.TimeRangeArray[q.TimeRange],
                             Status = Helper.GetStatus(q.ApplyStatus)
                         };
             this.GridView1.DataSource = query;
