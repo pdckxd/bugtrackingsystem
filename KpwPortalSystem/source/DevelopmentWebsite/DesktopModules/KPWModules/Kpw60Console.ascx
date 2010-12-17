@@ -71,17 +71,7 @@
          setTimeout('Play1()', 2000);
      });
 
-     function Play1() {
-         var Netocx1 = document.getElementById("NetOCX1");
-         var UserID = Netocx1.Login("159.226.75.29", 8000, "admin", "12345");
-         Netocx1.StartRealPlay(0, 0, 0);
-     }
-
-     function Stop1() {
-         var Netocx1 = document.getElementById("NetOCX1");
-         Netocx1.StopRealPlay();
-         Netocx1.Logout();
-     }
+    
 
   
 </script>
@@ -99,7 +89,7 @@
                                     <table width="100%">
                                     <tr>
                                     <td>
-                                     <object classid="clsid:CAFCF48D-8E34-4490-8154-026191D73924" codebase="../codebase/NetVideoActiveX23.cab#version=2,3,9,1"
+                                     <object classid="clsid:CAFCF48D-8E34-4490-8154-026191D73924" codebase="codebase/NetVideoActiveX23.cab#version=2,3,9,1"
 		  standby="Waiting..." id="NetOCX1"  name="ocx1" width="530" height="360" align="center" ></object>
                                     </td>
                                     </tr>

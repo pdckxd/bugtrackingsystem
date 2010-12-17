@@ -272,6 +272,7 @@
     <Content Include="astronomy\Images_small\930424599_e75865c0d6_s.jpg" />
     <Content Include="astronomy\Images\N001.jpg" />
     <Content Include="astronomy\temp\N001_big.jpg" />
+    <Content Include="codebase\NetVideoActiveX23.cab" />
     <Content Include="CrystalX\css\aural.css" />
     <Content Include="CrystalX\css\main.css" />
     <Content Include="CrystalX\css\print.css" />

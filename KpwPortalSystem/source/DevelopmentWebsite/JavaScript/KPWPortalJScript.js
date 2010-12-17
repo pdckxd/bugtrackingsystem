@@ -56,28 +56,48 @@ function onTakePictureSucceeded(result) {
     $get("result").innerHTML = "";
 }
 
+function Play1() {
+    var Netocx1 = document.getElementById("NetOCX1");
+    var UserID = Netocx1.Login("159.226.75.29", 8000, "admin", "12345");
+    Netocx1.StartRealPlay(0, 0, 0);
+}
+
+function Stop1() {
+    var Netocx1 = document.getElementById("NetOCX1");
+    Netocx1.StopRealPlay();
+    Netocx1.Logout();
+}
 
 function CatchImage() {
 
-    //var Netocx1 = document.getElementById("NetOCX1");
-    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
-    $get("txtFolderMessge").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles";
+    var Netocx1 = document.getElementById("NetOCX1");
+    var succeed = Netocx1.BMPCapturePicture("C:\\kpw\\OCXBMPCaptureFiles", true);
+    if(succeed == true)
+        $get("txtFolderMessge").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles";
+     else
+         $get("txtFolderMessge").innerHTML = "图片抓取失败，请重试!";
 }
 
 function StartVideo() {
 
     $get("txtFolderMessge").innerHTML = "开始录像....";
-    //var Netocx1 = document.getElementById("NetOCX1");
-    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
-    $get("txtFolderMessge").innerHTML = "正在录像....";
-    $("#btnStartVideo").hide();
-    $("#btnStopVideo").show();
+    var Netocx1 = document.getElementById("NetOCX1");
+    var succeed = Netocx1.StartRecord("C:\\kpw\\OCXVideoCaptureFiles");
+
+    if (succeed == true) {
+        $get("txtFolderMessge").innerHTML = "正在录像....";
+        $("#btnStartVideo").hide();
+        $("#btnStopVideo").show();
+    }
+    else {
+        $get("txtFolderMessge").innerHTML = "开始录像失败，请重试!";
+    }
 }
 
 function StopVideo() {
 
-    // var Netocx1 = document.getElementById("NetOCX1");
-    //Netocx1.BMPCapturePicture("C:\kpw\OCXBMPCaptureFiles", true);
+    var Netocx1 = document.getElementById("NetOCX1");
+    Netocx1.StopRecord(false);
     $("#btnStartVideo").show();
     $("#btnStopVideo").hide();
     $get("txtFolderMessge").innerHTML = "视频保存在文件夹 C:\\kpw\\OCXVideoCaptureFiles";
