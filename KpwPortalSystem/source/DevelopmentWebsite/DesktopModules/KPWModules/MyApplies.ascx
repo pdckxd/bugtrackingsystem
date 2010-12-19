@@ -55,22 +55,62 @@
             </tr>
             <tr style="height: 30px;">
                 <td>
-                    <asp:CheckBox ID="CheckBox7" Text="18:00-19:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox7" Text="6:00-7:00" runat="server" />
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox8" Text="19:00-20:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox8" Text="7:00-8:00" runat="server" />
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox9" Text="20:00-21:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox9" Text="8:00-9:00" runat="server" />
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox10" Text="21:00-22:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox10" Text="9:00-10:00" runat="server" />
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox11" Text="22:00-23:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox11" Text="10:00-11:00" runat="server" />
                 </td>
                 <td>
-                    <asp:CheckBox ID="CheckBox12" Text="23:00-24:00" runat="server" />
+                    <asp:CheckBox ID="CheckBox12" Text="11:00-12:00" runat="server" />
+                </td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>
+                    <asp:CheckBox ID="CheckBox13" Text="12:00-13:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox14" Text="13:00-14:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox15" Text="14:00-15:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox16" Text="15:00-16:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox17" Text="16:00-17:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox18" Text="17:00-18:00" runat="server" />
+                </td>
+            </tr>
+            <tr style="height: 30px;">
+                <td>
+                    <asp:CheckBox ID="CheckBox19" Text="18:00-19:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox20" Text="19:00-20:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox21" Text="20:00-21:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox22" Text="21:00-22:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox23" Text="22:00-23:00" runat="server" />
+                </td>
+                <td>
+                    <asp:CheckBox ID="CheckBox24" Text="23:00-24:00" runat="server" />
                 </td>
             </tr>
             <tr>

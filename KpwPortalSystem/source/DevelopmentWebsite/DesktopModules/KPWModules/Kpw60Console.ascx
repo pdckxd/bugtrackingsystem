@@ -30,7 +30,7 @@
              var position = $("#txtPosotion").val();
 
              if (isChecked == true) {
-                 FindStarByPosition(position);
+                 FindStarByPastPosition(position);
              }
              else {
                  FindStarByPosition(raH, raM, raS, decFlag, decD, decM, decS);
@@ -49,7 +49,15 @@
                  $("#txtPosotion").attr("disabled", "disabled");
              }
          });
-         
+
+         $("#btnStartTracking").click(function() {
+             StartTrackStar();
+         });
+
+         $("#btnStopTracking").click(function() {
+             StopTrackStar();
+         });
+
          $("#progressbar").progressbar();
 
          $("#btnPhoto").click(function() {
@@ -225,22 +233,20 @@
                                     </td>
                                     <td width="40%">
                                         <fieldset id="focus">
-                                            <legend>找星与跟踪</legend>
+                                            <legend>跟踪</legend>
                                             <table style="width: 100%; height: 100%">
                                                 <tr>
                                                     <td>
-                                                        <button id="btnFindStarByPosition1" type="button" class="sexybutton" style="width: 100px;">
-                                                            <span><span><span class="search">开镜盖</span></span></span></button>&nbsp;&nbsp;&nbsp;
-                                                        <button id="btnFindStarByName1" type="button" class="sexybutton" style="width: 100px;">
-                                                            <span><span><span class="search">关镜盖</span></span></span></button>&nbsp;&nbsp;&nbsp;
+                                                        <button id="btnStartTracking" type="button" class="sexybutton" style="width: 100px;">
+                                                            <span><span><span class="search">开始跟踪</span></span></span></button>&nbsp;&nbsp;&nbsp;
                                                         
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
                                                         
-                                                        <button type="button" class="sexybutton" style="width: 100px;">
-                                                            <span><span><span class="stop">跟踪</span></span></span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                        <button id="btnStopTracking" type="button" class="sexybutton" style="width: 100px;">
+                                                            <span><span><span class="stop">停止跟踪</span></span></span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     </td>
                                                 </tr>
                                             </table>
@@ -328,16 +334,16 @@
                                                     <tr>
                                                         <td align="left">
                                                             <select id="selectStarName" style="width: 140px;">
-                                                                <%--<option label="太阳" value="1"></option>
-                                                <option label="月亮" value="2"></option>--%>
+                                                                <%--<option label="太阳" value="01"></option>
+                                                <option label="月亮" value="02"></option>--%>
                                                                 <optgroup label="行星">
                                                                 </optgroup>
-                                                                <option label="水星" value="3"></option>
-                                                                <option label="金星" value="4"></option>
-                                                                <option label="火星" value="5"></option>
-                                                                <option label="木星" value="6"></option>
-                                                                <option label="土星" value="7"></option>
-                                                                <option label="天王星" value="8"></option>
+                                                                <option label="水星" value="03"></option>
+                                                                <option label="金星" value="04"></option>
+                                                                <option label="火星" value="05"></option>
+                                                                <option label="木星" value="06"></option>
+                                                                <option label="土星" value="07"></option>
+                                                                <option label="天王星" value="08"></option>
                                                                 <optgroup label="恒星">
                                                                 </optgroup>
                                                                 <option label="天狼星(大犬座α)" value="11"></option>

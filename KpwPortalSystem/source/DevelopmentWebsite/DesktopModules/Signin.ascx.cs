@@ -39,7 +39,7 @@ namespace DesktopModules.Web
                 FormsAuthentication.SetAuthCookie(email.Text, RememberCheckbox.Checked);
 
                 // Redirect browser back to originating page
-                Response.Redirect(Global.GetApplicationPath(Request));
+                Response.Redirect("DesktopDefault.aspx");
             }
             else
             {

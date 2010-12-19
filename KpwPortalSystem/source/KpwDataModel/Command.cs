@@ -32,7 +32,11 @@ namespace Nairc.KpwFramework.DataModel
         //按星名称找星
         FindStarByName,
         //停止找星
-        StopFindStar
+        StopFindStar,
+        //开始跟踪
+        StartTrackStar,
+        //停止跟踪
+        StopTrackStar
     }
 
     public enum DataMessage

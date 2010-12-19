@@ -2,3 +2,21 @@
  - Send Command. Msg:StopFindStar
 2010-12-13 21:21:54,213 [9] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
  - Send Command. Msg:FindStarByName
+2010-12-19 18:48:41,555 [18] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:FindStarByPosition
+2010-12-19 18:48:41,639 [18] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Ra:0000000,Dec:+000000.
+2010-12-19 18:47:21,733 [12] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:FindStarByPosition
+2010-12-19 18:47:21,767 [12] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Ra:0000000,Dec:+000000.
+2010-12-19 18:47:31,840 [10] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:RaBackwardFast
+2010-12-19 18:47:36,345 [9] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:DecStop
+2010-12-19 19:00:48,409 [9] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StartTrackStar
+2010-12-19 19:02:11,692 [8] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StartTrackStar
+2010-12-19 19:02:16,817 [9] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StopTrackStar

@@ -17,9 +17,9 @@ function FindStarByPosition(RaH,RaM,RaS,DecFlag,DecD,DecM,DecS) {
     $get("result").innerHTML = "坐标找星...";
 }
 
-function FindStarByPosition(position) {
+function FindStarByPastPosition(position) {
     WebApplication.KPWPortalWebService.FindStarByPosition(position, onSendCommandSucceeded);
-    $get("result").innerHTML = "坐标找星...";
+    $get("result").innerHTML = "粘贴坐标找星...";
 }
 
 function FindStarByName(name) {
@@ -30,6 +30,16 @@ function FindStarByName(name) {
 function StopFindStar() {
     WebApplication.KPWPortalWebService.StopFindStar(onSendCommandSucceeded);
     $get("result").innerHTML = "停止找星...";
+}
+
+function StartTrackStar() {
+    WebApplication.KPWPortalWebService.StartTrackStar(onSendCommandSucceeded);
+    $get("result").innerHTML = "正在跟踪...";
+}
+
+function StopTrackStar() {
+    WebApplication.KPWPortalWebService.StopTrackStar(onSendCommandSucceeded);
+    $get("result").innerHTML = "跟踪停止！";
 }
 
 function onSendCommandSucceeded(result) {

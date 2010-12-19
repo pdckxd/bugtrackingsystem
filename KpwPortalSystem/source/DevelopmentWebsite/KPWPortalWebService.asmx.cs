@@ -165,6 +165,46 @@ namespace WebApplication
         }
 
         [WebMethod]
+        public bool StartTrackStar()
+        {
+            try
+            {
+                SocketCommandSender fss = new SocketCommandSender();
+
+                CommandMessage message = CommandMessage.StartTrackStar;
+                logger.Debug("Send Command. Msg:" + message.ToString());
+
+                fss.Send(message);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Send command failed. Msg:" + CommandMessage.StartTrackStar.ToString(), ex);
+                return false;
+            }
+        }
+
+        [WebMethod]
+        public bool StopTrackStar()
+        {
+            try
+            {
+                SocketCommandSender fss = new SocketCommandSender();
+
+                CommandMessage message = CommandMessage.StopTrackStar;
+                logger.Debug("Send Command. Msg:" + message.ToString());
+
+                fss.Send(message);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                logger.Error("Send command failed. Msg:" + CommandMessage.StopTrackStar.ToString(), ex);
+                return false;
+            }
+        }
+
+        [WebMethod]
         public ImageInfo TakePicture(int grabTime)
         {
             System.Threading.Thread.Sleep(grabTime * 1000);

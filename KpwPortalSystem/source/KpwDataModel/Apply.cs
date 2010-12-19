@@ -25,10 +25,7 @@ namespace Nairc.KpwFramework.DataModel
         {
             get
             {
-                if (TimeRange < 7)
-                    return this.ApplyDate.AddHours(TimeRange - 1);
-                else
-                    return this.ApplyDate.AddHours(12 + TimeRange -1);
+                return this.ApplyDate.AddHours(TimeRange - 1);
             }
         }
 
@@ -36,10 +33,7 @@ namespace Nairc.KpwFramework.DataModel
         {
             get
             {
-                if (TimeRange < 7)
-                    return this.ApplyDate.AddHours(TimeRange);
-                else
-                    return this.ApplyDate.AddHours(12 + TimeRange);
+               return this.ApplyDate.AddHours(TimeRange);
             }
         }
     }

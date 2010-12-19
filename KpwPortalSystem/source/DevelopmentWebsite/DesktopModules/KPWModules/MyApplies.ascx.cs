@@ -30,7 +30,19 @@ namespace DesktopModules.Web
                     CheckBox9,
                     CheckBox10,
                     CheckBox11,
-                    CheckBox12
+                    CheckBox12,
+                    CheckBox13,
+                    CheckBox14,
+                    CheckBox15,
+                    CheckBox16,
+                    CheckBox17,
+                    CheckBox18,
+                    CheckBox19,
+                    CheckBox20,
+                    CheckBox21,
+                    CheckBox22,
+                    CheckBox23,
+                    CheckBox24
                 };
             }
         }
@@ -65,7 +77,7 @@ namespace DesktopModules.Web
             ApplyDB db = new ApplyDB();
             DateTime date = DateTime.Parse(this.datepicker.Value);
 
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 24; i++)
             {
                 var checkbox = TimeRangeCheckBoxs[i];
 

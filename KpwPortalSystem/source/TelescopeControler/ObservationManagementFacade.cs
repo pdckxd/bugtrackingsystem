@@ -15,9 +15,11 @@ namespace Nairc.KpwFramework.TelescopeControler
 
             IEnumerable<Apply> applies = db.GetMyApplies(DateTime.Now.Date, user);
 
-            var query = applies.Select(x => x.ApplyStatus == ApplyStatus.Approved && DateTime.Now >= x.TimeFrom && DateTime.Now <= x.TimeTo);
+            var query = from x in applies
+                        where x.ApplyStatus == ApplyStatus.Approved && DateTime.Now >= x.TimeFrom && DateTime.Now <= x.TimeTo
+                        select x;
 
-            return query.First();
+            return query.Any();
         }
     }
 }

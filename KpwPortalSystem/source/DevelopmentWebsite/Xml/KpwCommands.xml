@@ -14,5 +14,7 @@
     <KpwCommand Name="FindStarByPosition" Word="FIND:" RealParameterWordCount="14" Command="{RA}{DEC}" />
     <KpwCommand Name="FindStarByName" Word="STAR:" RealParameterWordCount="1" Command="1" />
     <KpwCommand Name="StopFindStar" Word="CANC:" RealParameterWordCount="1" Command="1" />
+    <KpwCommand Name="StartTrackStar" Word="TRAC:" RealParameterWordCount="1" Command="1" />
+    <KpwCommand Name="StopTrackStar" Word="TRAC:" RealParameterWordCount="1" Command="0" />
   </SubKpwCommandList>
 </KpwCommands>
