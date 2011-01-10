@@ -6,7 +6,8 @@
 <div>
 <asp:UpdatePanel ID="updatePanel" runat="server" UpdateMode="Conditional">
 <ContentTemplate>
-    <asp:GridView ID="GridView1" runat="server" DataKeyNames="ID" AutoGenerateColumns="False" OnRowUpdating="GridView_RowUpdating" OnRowCommand="GridView1_RowCommand"   OnRowDataBound="GridView_RowDataBound">
+    <asp:GridView ID="GridView1" runat="server" DataKeyNames="ID" AutoGenerateColumns="False" OnRowUpdating="GridView_RowUpdating" OnRowCommand="GridView1_RowCommand"  
+     OnRowDataBound="GridView_RowDataBound" PageSize="15" AllowPaging="true">
         <Columns>
             <asp:BoundField HeaderText="申请人" DataField="Name">
             <HeaderStyle Width="120px" />

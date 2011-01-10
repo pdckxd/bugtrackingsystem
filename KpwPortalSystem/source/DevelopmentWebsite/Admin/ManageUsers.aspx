@@ -37,7 +37,7 @@
                 <td>
                     <asp:TextBox ID="Password" Width="200" CssClass="NormalTextBox" runat="server" TextMode="Password" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*"
-                        ControlToValidate="Password" CssClass="NormalRed" Display="Dynamic"></asp:RequiredFieldValidator>
+                        ControlToValidate="Password" CssClass="NormalRed" Display="Dynamic" ValidationGroup="PasswordGroup"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
@@ -48,14 +48,14 @@
                     <asp:TextBox ID="ConfirmPassword" Width="200" CssClass="NormalTextBox" runat="server"
                         TextMode="Password" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*"
-                        ControlToValidate="ConfirmPassword" CssClass="NormalRed" Display="Dynamic"></asp:RequiredFieldValidator>
+                        ControlToValidate="ConfirmPassword" CssClass="NormalRed" Display="Dynamic" ValidationGroup="PasswordGroup"></asp:RequiredFieldValidator>
                     <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="*" ControlToValidate="ConfirmPassword"
-                        ControlToCompare="Password" CssClass="NormalRed" Display="Dynamic"></asp:CompareValidator>
+                        ControlToCompare="Password" CssClass="NormalRed" Display="Dynamic" ValidationGroup="PasswordGroup"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
                 <td colspan="3">
-                    <asp:LinkButton ID="Linkbutton1" OnClick="UpdateUser_Click" runat="server" CssClass="CommandButton"
+                    <asp:LinkButton ID="Linkbutton1" OnClick="UpdateUser_Click" runat="server" CssClass="CommandButton" ValidationGroup="PasswordGroup"
                         Text="应用用户名密码修改"></asp:LinkButton>
                     <br>
                     <br>
@@ -79,7 +79,7 @@
                         <ItemStyle Width="225" />
                         <ItemTemplate>
                             &nbsp;&nbsp;
-                            <asp:ImageButton ImageUrl="~/images/delete.gif" CommandName="delete" AlternateText="Remove user from this role"
+                            <asp:ImageButton ImageUrl="~/images/delete.gif" CommandName="delete" AlternateText="从该角色中删除该用户"
                                 runat="server" ID="Imagebutton1" />
                             <asp:Label Text='<%#DataBinder.Eval(Container.DataItem, "RoleName")%>' CssClass="Normal"
                                 runat="server" ID="Label1" />

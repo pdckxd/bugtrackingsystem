@@ -250,7 +250,8 @@ namespace Admin.Web
             {
                 if (item.Selected)
                 {
-                    authorizedRoles = authorizedRoles + item.Text + ";";
+                    string role = item.Text == "所有用户" ? "All Users" : item.Text;
+                    authorizedRoles = authorizedRoles + role + ";";
                 }
             }
 

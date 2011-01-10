@@ -170,7 +170,7 @@ namespace DesktopModules.Web
                             TimeRange = Helper.TimeRangeArray[q.TimeRange],
                             Status = Helper.GetStatus(q.ApplyStatus)
                         };
-            this.GridView1.DataSource = query;
+            this.GridView1.DataSource = query.ToList();
             this.GridView1.DataBind();
         }
 

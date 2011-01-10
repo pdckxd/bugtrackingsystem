@@ -11,13 +11,12 @@
                     <br />
                     <br />
                     <br />
-                    <span class="Head">Access Denied</span>
+                    <span class="Head">拒绝访问</span>
                     <br />
                     <br />
                     <hr noshade="noshade" size="1" />
                     <br />
-                    Either you are not currently logged in, or you do not have access to this tab page
-                    within the portal. Please contact the portal administrator to obtain access.
+                    你无权访问该页面，请联系管理员！
                     <br />
                     <br />
                     <a href="<%=Global.GetApplicationPath(Request)%>/DesktopDefault.aspx">返回深圳市天文观测系统首页</a>

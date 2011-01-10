@@ -45,13 +45,12 @@
     <!-- Footer -->
     <div id="footer">
      <div class="SiteLink">                        
-        <a class="sitemaplink" href="http://159.226.75.27:8080/Web.sitemap">站点地图</a> 
-        | <a href="http://www.nairc.com"> 
+        <a href='#' >联系我们</a>|
+        <a href="http://www.nairc.com"> 
             &copy;2010 中科院南京天文仪器有限公司
         </a>|
-        <a href='#' >联系我们</a>|
         <a href='#' >法律问题</a>|
-        <a href='#' >Powered by Cosmoser</a>                            
+        <a href='http://www.cosmoser.com' target="_blank" >Powered by Cosmoser</a>                            
      </div>    
     </div>
     </form>
