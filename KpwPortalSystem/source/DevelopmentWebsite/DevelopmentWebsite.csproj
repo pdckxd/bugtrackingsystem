@@ -1856,11 +1856,15 @@
   </ProjectExtensions>
   <PropertyGroup>
     <PostBuildEvent>cd $(ProjectDir)
+del $(SolutionDir)..\Deploy\*.* /q /s
 xcopy $(SolutionDir)DevelopmentWebsite $(SolutionDir)..\Deploy /exclude:uncopy.txt /i /e /y
 xcopy $(SolutionDir)DevelopmentWebsite\bin $(SolutionDir)..\Deploy\bin /i /e /y
 xcopy $(SolutionDir)DevelopmentWebsite\css $(SolutionDir)..\Deploy\css /i /e /y
 xcopy $(SolutionDir)DevelopmentWebsite\CrystalX $(SolutionDir)..\Deploy\CrystalX /i /e /y
 xcopy $(SolutionDir)DevelopmentWebsite\Javascript $(SolutionDir)..\Deploy\Javascript /i /e /y
-xcopy $(SolutionDir)DevelopmentWebsite\ASPNETPortal.css $(SolutionDir)..\Deploy /i /e /y</PostBuildEvent>
+xcopy $(SolutionDir)DevelopmentWebsite\ASPNETPortal.css $(SolutionDir)..\Deploy /i /e /y
+xcopy $(SolutionDir)..\database\Kpw_CreateDB.sql $(SolutionDir)..\Deploy\database /i /e /y
+xcopy $(SolutionDir)..\database\Portal_CreateDB.sql $(SolutionDir)..\Deploy\database /i /e /y
+xcopy $(SolutionDir)..\database\Portal_LoadData.sql $(SolutionDir)..\Deploy\database /i /e /y</PostBuildEvent>
   </PropertyGroup>
 </Project>

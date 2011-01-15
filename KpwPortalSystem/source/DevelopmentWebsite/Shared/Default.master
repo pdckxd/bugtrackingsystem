@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head id="Head1" runat="server">
-    <title>深圳市天文观测系统</title>
+    <title>天文望远镜网络远程观测系统</title>
     
     <link href="~/css/KpwStyle.css" type="text/css" rel="stylesheet" />
     <link href="~/ASPNETPortal.css" type="text/css" rel="stylesheet" />

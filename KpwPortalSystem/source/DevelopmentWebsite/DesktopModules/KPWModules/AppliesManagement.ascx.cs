@@ -42,41 +42,34 @@ namespace DesktopModules.Web
 
         protected void GridView1_RowCommand(object sender,GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-
-            int id = int.Parse(GridView1.DataKeys[index].Value.ToString());
-            ApplyDB db = new ApplyDB();
-            Apply apply = db.GetApplyById(id);
-
-            if (apply != null && apply.ApplyStatus == ApplyStatus.Submitted)
+            if (e.CommandName == "Approve" || e.CommandName == "Deactivate")
             {
-                apply.ApplyStatus = ApplyStatus.Approved;
-                db.UpdateApply(apply);
+                int index = Convert.ToInt32(e.CommandArgument);
 
-                var applies = db.GetApplyByTimeRange(apply.ApplyDate, apply.TimeRange, ApplyStatus.Submitted);
+                int id = int.Parse(GridView1.DataKeys[index].Value.ToString());
+                ApplyDB db = new ApplyDB();
+                Apply apply = db.GetApplyById(id);
 
-                foreach (var item in applies)
+                if (apply != null && apply.ApplyStatus == ApplyStatus.Submitted)
                 {
-                    item.ApplyStatus = ApplyStatus.Deactivated;
-                    db.UpdateApply(item);
+                    apply.ApplyStatus = ApplyStatus.Approved;
+                    db.UpdateApply(apply);
+
+                    var applies = db.GetApplyByTimeRange(apply.ApplyDate, apply.TimeRange, ApplyStatus.Submitted);
+
+                    foreach (var item in applies)
+                    {
+                        item.ApplyStatus = ApplyStatus.Deactivated;
+                        db.UpdateApply(item);
+                    }
                 }
+                else if (apply != null && apply.ApplyStatus == ApplyStatus.Approved)
+                {
+                    apply.ApplyStatus = ApplyStatus.Deactivated;
+                    db.UpdateApply(apply);
+                }
+                this.LoadCurrentApplies();
             }
-            else if (apply != null && apply.ApplyStatus == ApplyStatus.Approved)
-            {
-                apply.ApplyStatus = ApplyStatus.Deactivated;
-                db.UpdateApply(apply);
-            }
-            this.LoadCurrentApplies();
-
-            //if (e.CommandName == "Approve")
-            //{
-                
-
-            //}
-            //else if (e.CommandName == "Deactivate")
-            //{
-
-            //}
         }
 
 
@@ -115,6 +108,12 @@ namespace DesktopModules.Web
                         };
             this.GridView1.DataSource = query.ToList();
             this.GridView1.DataBind();
+        }
+
+        protected void GridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)
+        {
+            this.GridView1.PageIndex = e.NewPageIndex;
+            LoadCurrentApplies();
         }
     }
 }

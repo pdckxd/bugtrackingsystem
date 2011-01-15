@@ -77,7 +77,7 @@ namespace DesktopModules.Web
             ApplyDB db = new ApplyDB();
             DateTime date = DateTime.Parse(this.datepicker.Value);
 
-            for (int i = 0; i < 24; i++)
+            for (int i = 1; i <= 24; i++)
             {
                 var checkbox = TimeRangeCheckBoxs[i];
 
@@ -174,8 +174,12 @@ namespace DesktopModules.Web
             this.GridView1.DataBind();
         }
 
-       
+     
 
-    
+        protected void GridView_PageIndexChanging(Object sender, GridViewPageEventArgs e)
+        {
+            this.GridView1.PageIndex = e.NewPageIndex;
+            LoadMyApplies();
+        }
     }
 }

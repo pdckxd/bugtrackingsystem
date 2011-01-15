@@ -128,7 +128,7 @@
             <hr />
         </div>
         <div>
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="15" AllowPaging="true">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" PageSize="15" AllowPaging="true"  OnPageIndexChanging="GridView_PageIndexChanging">
                 <Columns>
                     <asp:BoundField HeaderText="日期" DataField="Date" DataFormatString="{0:yyyy-MM-dd}">
                         <HeaderStyle Width="120px" />

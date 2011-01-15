@@ -192,6 +192,13 @@
     <Compile Include="KPWModules\AppliesManagement.ascx.designer.cs">
       <DependentUpon>AppliesManagement.ascx</DependentUpon>
     </Compile>
+    <Compile Include="KPWModules\KpwCommonPictures.ascx.cs">
+      <DependentUpon>KpwCommonPictures.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\KpwCommonPictures.ascx.designer.cs">
+      <DependentUpon>KpwCommonPictures.ascx</DependentUpon>
+    </Compile>
     <Compile Include="KPWModules\Helper.cs" />
     <Compile Include="KPWModules\ImageGalleryEx.aspx.cs">
       <DependentUpon>ImageGalleryEx.aspx</DependentUpon>
@@ -241,6 +248,13 @@
     </Compile>
     <Compile Include="KPWModules\Kpw60Telescope.ascx.designer.cs">
       <DependentUpon>Kpw60Telescope.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="KPWModules\KpwCommonConsole.ascx.cs">
+      <DependentUpon>KpwCommonConsole.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KPWModules\KpwCommonConsole.ascx.designer.cs">
+      <DependentUpon>KpwCommonConsole.ascx</DependentUpon>
     </Compile>
     <Compile Include="KPWModules\KpwRadioTelescope.ascx.cs">
       <DependentUpon>KpwRadioTelescope.ascx</DependentUpon>
@@ -333,6 +347,7 @@
     <Content Include="HtmlModule.ascx" />
     <Content Include="ImageModule.ascx" />
     <Content Include="KPWModules\AppliesManagement.ascx" />
+    <Content Include="KPWModules\KpwCommonPictures.ascx" />
     <Content Include="KPWModules\ImageGalleryEx.aspx" />
     <Content Include="KPWModules\ImagesGallery.aspx" />
     <Content Include="KPWModules\Kpw60Camera.ascx" />
@@ -340,6 +355,7 @@
     <Content Include="KPWModules\Kpw60ConsolePage.aspx" />
     <Content Include="KPWModules\Kpw60Pictures.ascx" />
     <Content Include="KPWModules\Kpw60Telescope.ascx" />
+    <Content Include="KPWModules\KpwCommonConsole.ascx" />
     <Content Include="KPWModules\KpwRadioTelescope.ascx" />
     <Content Include="KPWModules\KPWSample.ascx" />
     <Content Include="KPWModules\KpwSolarTelescope.ascx" />
@@ -403,7 +419,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties IsFolderOfRootWebProject="true" IsWebProject="true" />
+      <UserProperties IsWebProject="true" IsFolderOfRootWebProject="true" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
