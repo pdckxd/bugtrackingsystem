@@ -16,5 +16,6 @@
     <KpwCommand Name="StopFindStar" Word="CANC:" RealParameterWordCount="1" Command="1" />
     <KpwCommand Name="StartTrackStar" Word="TRAC:" RealParameterWordCount="1" Command="1" />
     <KpwCommand Name="StopTrackStar" Word="TRAC:" RealParameterWordCount="1" Command="0" />
+    <KpwCommand Name="Login" Word="LGIN:" RealParameterWordCount="1" Command="kpw:123456" />
   </SubKpwCommandList>
 </KpwCommands>

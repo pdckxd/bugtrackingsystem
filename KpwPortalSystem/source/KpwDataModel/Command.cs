@@ -36,7 +36,9 @@ namespace Nairc.KpwFramework.DataModel
         //开始跟踪
         StartTrackStar,
         //停止跟踪
-        StopTrackStar
+        StopTrackStar,
+        //登陆命令
+        Login
     }
 
     public enum DataMessage

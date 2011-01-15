@@ -126,6 +126,8 @@ namespace Nairc.KpwFramework.TelescopeControler
                             try
                             {
                                 this._tcpClient = new TcpClient(this._hostName, this._port);
+                                //Thread.Sleep(2000);
+                                //this.SendMsg(KpwCommands.GetCommandString(CommandMessage.Login.ToString()));
                             }
                             catch
                             {

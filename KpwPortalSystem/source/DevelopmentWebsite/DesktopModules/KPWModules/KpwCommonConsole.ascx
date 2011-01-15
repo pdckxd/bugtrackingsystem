@@ -109,13 +109,13 @@
                                             </tr>
                                             <tr>
                                             <td align="left">
-                                            <button id="btnCatchImage1" type="reset" class="sexybutton" onclick="CatchImage1()">
+                                            <button id="btnCatchImage" type="reset" class="sexybutton" onclick="CatchImage()">
                                                                     <span><span><span class="camerapicture">抓图</span></span></span></button>&nbsp;&nbsp;
-                                            <button id="btnStartVideo1" type="reset" class="sexybutton" onclick="StartVideo1()">
+                                            <button id="btnStartVideo" type="reset" class="sexybutton" onclick="StartVideo()">
                                                                     <span><span><span class="camerastart" >开始录像</span></span></span></button>
-                                            <button id="btnStopVideo1" type="reset" class="sexybutton" onclick="StopVideo1()" style=" display:none">
+                                            <button id="btnStopVideo" type="reset" class="sexybutton" onclick="StopVideo()" style=" display:none">
                                                                     <span><span><span class="camerastop">停止录像</span></span></span></button>
-                                            <div id="txtFolderMessge1" style="color:Red"></div>
+                                            <div id="txtFolderMessge" style="color:Red"></div>
                                             </td>
                                             </tr>
                                             </table>
@@ -125,18 +125,18 @@
                                             <tr>
                                             <td>
                                              <object classid="clsid:CAFCF48D-8E34-4490-8154-026191D73924" codebase="codebase/NetVideoActiveX23.cab#version=2,3,9,1"
-		          standby="Waiting..." id="NetOCX2"  name="ocx1" width="320" height="288" align="center" ></object>
+		          standby="Waiting..." id="Object1"  name="ocx1" width="320" height="288" align="center" ></object>
                                             </td>
                                             </tr>
                                             <tr>
                                             <td align="left">
-                                            <button id="btnCatchImage2" type="reset" class="sexybutton" onclick="CatchImage2()">
+                                            <button id="btnCatchImageX" type="reset" class="sexybutton" onclick="CatchImageX()">
                                                                     <span><span><span class="camerapicture">抓图</span></span></span></button>&nbsp;&nbsp;
-                                            <button id="btnStartVideo2" type="reset" class="sexybutton" onclick="StartVideo2()">
+                                            <button id="btnStartVideoX" type="reset" class="sexybutton" onclick="StartVideoX()">
                                                                     <span><span><span class="camerastart" >开始录像</span></span></span></button>
-                                            <button id="btnStopVideo2" type="reset" class="sexybutton" onclick="StopVideo2()" style=" display:none">
+                                            <button id="btnStopVideoX" type="reset" class="sexybutton" onclick="StopVideoX()" style=" display:none">
                                                                     <span><span><span class="camerastop">停止录像</span></span></span></button>
-                                            <div id="txtFolderMessge2" style="color:Red"></div>
+                                            <div id="txtFolderMessgeX" style="color:Red"></div>
                                             </td>
                                             </tr>
                                             </table>

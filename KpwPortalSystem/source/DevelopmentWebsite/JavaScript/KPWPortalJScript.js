@@ -71,9 +71,9 @@ function Play1() {
     var UserID = Netocx1.Login("159.226.75.29", 8000, "admin", "12345");
     Netocx1.StartRealPlay(0, 0, 0);
 
-    var Netocx2 = document.getElementById("NetOCX2");
-    var UserID = Netocx2.Login("159.226.75.29", 8000, "admin", "12345");
-    Netocx2.StartRealPlay(1, 0, 0);
+    var Object1 = document.getElementById("Object1");
+    var UserID = Object1.Login("159.226.75.29", 8000, "admin", "12345");
+    Object1.StartRealPlay(1, 0, 0);
 }
 
 function Stop1() {
@@ -82,17 +82,17 @@ function Stop1() {
     Netocx1.Logout();
 }
 
-function CatchImage1() {
-
+function CatchImage() {
+    
     var Netocx1 = document.getElementById("NetOCX1");
-    var succeed = Netocx1.BMPCapturePicture("C:\\kpw\\OCXBMPCaptureFiles\\主镜", true);
+    var succeed = Netocx1.BMPCapturePicture("C:\\kpw\\OCXBMPCaptureFiles\\主镜", false);
     if(succeed == true)
         $get("txtFolderMessge").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles\\主镜";
      else
          $get("txtFolderMessge").innerHTML = "图片抓取失败，请重试!";
 }
 
-function StartVideo1() {
+function StartVideo() {
 
     $get("txtFolderMessge").innerHTML = "开始录像....";
     var Netocx1 = document.getElementById("NetOCX1");
@@ -108,7 +108,7 @@ function StartVideo1() {
     }
 }
 
-function StopVideo1() {
+function StopVideo() {
 
     var Netocx1 = document.getElementById("NetOCX1");
     Netocx1.StopRecord(false);
@@ -118,39 +118,38 @@ function StopVideo1() {
     
 }
 
-function CatchImage2() {
+function CatchImageX() {
 
-    var Netocx2 = document.getElementById("NetOCX2");
-    var succeed = Netocx1.BMPCapturePicture("C:\\kpw\\OCXBMPCaptureFiles\\姿态", true);
+    var Netocx2 = document.getElementById("Object1");
+    var succeed = Netocx2.BMPCapturePicture("C:\\kpw\\OCXBMPCaptureFiles\\姿态", false);
     if (succeed == true)
-        $get("txtFolderMessge2").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles\\姿态";
+        $get("txtFolderMessgeX").innerHTML = "图片保存在文件夹 C:\\kpw\\OCXBMPCaptureFiles\\姿态";
     else
-        $get("txtFolderMessge2").innerHTML = "图片抓取失败，请重试!";
+        $get("txtFolderMessgeX").innerHTML = "图片抓取失败，请重试!";
 }
 
-function StartVideo2() {
-
-    $get("txtFolderMessge2").innerHTML = "开始录像....";
-    var Netocx2 = document.getElementById("NetOCX2");
+function StartVideoX() {
+    $get("txtFolderMessgeX").innerHTML = "开始录像....";
+    var Netocx2 = document.getElementById("Object1");
     var succeed = Netocx2.StartRecord("C:\\kpw\\OCXVideoCaptureFiles\\姿态");
 
     if (succeed == true) {
-        $get("txtFolderMessge2").innerHTML = "正在录像....";
-        $("#btnStartVideo2").hide();
-        $("#btnStopVideo2").show();
+        $get("txtFolderMessgeX").innerHTML = "正在录像....";
+        $("#btnStartVideoX").hide();
+        $("#btnStopVideoX").show();
     }
     else {
-        $get("txtFolderMessge2").innerHTML = "开始录像失败，请重试!";
+        $get("txtFolderMessgeX").innerHTML = "开始录像失败，请重试!";
     }
 }
 
-function StopVideo2() {
+function StopVideoX() {
 
-    var Netocx2 = document.getElementById("NetOCX2");
+    var Netocx2 = document.getElementById("Object1");
     Netocx2.StopRecord(false);
-    $("#btnStartVideo2").show();
-    $("#btnStopVideo2").hide();
-    $get("txtFolderMessge2").innerHTML = "视频保存在文件夹 C:\\kpw\\OCXVideoCaptureFiles\\姿态";
+    $("#btnStartVideoX").show();
+    $("#btnStopVideoX").hide();
+    $get("txtFolderMessgeX").innerHTML = "视频保存在文件夹 C:\\kpw\\OCXVideoCaptureFiles\\姿态";
 
 }
 

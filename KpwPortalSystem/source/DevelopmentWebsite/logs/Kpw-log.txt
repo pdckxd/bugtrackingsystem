@@ -20,3 +20,43 @@
  - Send Command. Msg:StartTrackStar
 2010-12-19 19:02:16,817 [9] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
  - Send Command. Msg:StopTrackStar
+2011-01-15 17:43:57,945 [8] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:RaBackwardFast
+2011-01-15 17:43:57,961 [8] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:-KTTOK
+
+2011-01-15 17:44:00,211 [8] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:DecStop
+2011-01-15 17:44:00,211 [8] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:+HTTOK
+
+2011-01-15 17:54:35,242 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:RaBackwardFast
+2011-01-15 17:54:35,258 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:-KTTOK
+
+2011-01-15 17:54:36,305 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:DecStop
+2011-01-15 17:54:36,305 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:+HTTOK
+
+2011-01-15 17:54:52,648 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:DecForwardSlow
+2011-01-15 17:54:52,648 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:+H+MOK
+
+2011-01-15 17:54:53,539 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:DecStop
+2011-01-15 17:54:53,539 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:AXIS:+HTTOK
+
+2011-01-15 17:54:56,430 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StartTrackStar
+2011-01-15 17:54:56,430 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:TRAC:1OK
+
+2011-01-15 17:54:59,367 [4] DEBUG WebApplication.KPWPortalWebService [(null)] <(null)>
+ - Send Command. Msg:StopTrackStar
+2011-01-15 17:54:59,367 [4] DEBUG Nairc.KpwFramework.TelescopeControler.KpwTcpClient [(null)] <(null)>
+ - Send command: KPW:TRAC:0OK
+
