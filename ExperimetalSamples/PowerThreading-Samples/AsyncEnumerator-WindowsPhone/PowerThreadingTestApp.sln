@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerThreadingTestApp", "PowerThreadingTestApp\PowerThreadingTestApp.csproj", "{43DF93A4-F375-40BD-A995-2B05DD5F55AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerThreading-WindowsPhone", "..\PowerThreading-WindowsPhone\PowerThreading-WindowsPhone.csproj", "{F2D13F04-4069-4D1A-9C2D-A70F80A57DE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43DF93A4-F375-40BD-A995-2B05DD5F55AB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F2D13F04-4069-4D1A-9C2D-A70F80A57DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D13F04-4069-4D1A-9C2D-A70F80A57DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D13F04-4069-4D1A-9C2D-A70F80A57DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D13F04-4069-4D1A-9C2D-A70F80A57DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
