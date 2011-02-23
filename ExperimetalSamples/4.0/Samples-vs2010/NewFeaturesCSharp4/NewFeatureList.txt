@@ -9,3 +9,5 @@ The first feature in C# 4.0 is the support to dynamic programming.
 A new keyword is introduced: dynamic and it's used to tell the compiler that the object is defined at runtime, 
 and it's able to response to dynamic messages. A dynamic object is assumed to support any operation 
 at compile time; only at runtime you will get an error.
+To make it easier for developers using reflection or communicating with other components,
+the C# compiler offers you a way to mark an expression’s type as dynamic.
